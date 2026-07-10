@@ -1,0 +1,15 @@
+header
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.headerContainer
+{
+    display: flex;
+    width: 80%;
+    background-color: rgb(213, 213, 213);
+    margin-top: 40px;
+    border-radius: 30px;
+    padding: 40px;
+}

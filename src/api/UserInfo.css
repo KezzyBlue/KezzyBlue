@@ -1,0 +1,140 @@
+.avatarContainer{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    user-select: none;
+}
+.avatar, .avatarFrame{
+    position: absolute;
+    inset: 0;         
+    width: 100%;
+    height: 100%;
+}
+
+.avatar{
+    border-radius: 50%;
+}
+
+.avatarFrame{
+    transform: scale(1.15);
+}
+.status{
+    position: absolute;
+
+    width: 25px;
+    height: 25px;
+
+    border-radius: 50%;
+    border: none;
+
+    bottom: 12px;
+    right: 12px;
+}
+
+.online{
+    background-color: #2abd67;
+}
+
+.idle{
+    background-color: #f0b232;
+}
+
+.dnd{
+    background-color: #f23f43;
+}
+
+.offline{
+    background-color: #80848e;
+}
+.pulse{
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: #2abd67;
+    animation: pulse 1.8s infinite;
+}
+@keyframes pulse{
+    0%{
+        transform: scale(1);
+        opacity: 0.8;
+    }
+
+    70%{
+        transform: scale(2.5);
+        opacity: 0;
+    }
+
+    100%{
+        transform: scale(2.5);
+        opacity: 0;
+    }
+}
+.activitiesContainer {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: absolute;
+    top: 20%;
+    left: 120%;
+    min-width: 300px;
+    padding: 5px 20px;
+    border: 6px dashed rgb(88, 88, 88);
+    border-radius: 18px;
+    background-color: rgb(250, 255, 255);
+}
+.activitiesContainer ul {
+    list-style: none;
+    padding-left: 0;
+}
+.activitiesContainer li::before {
+    content: "◆";
+    margin-right: 8px;
+}
+.activitiesContainer li p{
+    margin: 0px auto 20px auto;
+}
+.albumArt
+{
+    margin: 10px 10px;
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+}
+.infoSong
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.spotify
+{
+    display: flex;
+}
+.song
+{
+    font-weight: bold;
+}
+.artist
+{
+    font-size: 90%;
+}
+.progress-bar {
+    width: 300px;
+    height: 5px;
+    background: #555;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: #1DB954;
+    transition: width 1s linear;
+}
+.songTime{
+    display: flex;
+    justify-content: space-between;
+    font-size: 70%;
+}
+.activity
+{
+    margin-left: 30px;
+}
