@@ -3,7 +3,7 @@ function About()
     return(
         <> 
             <h1>
-                Is beeing developed
+                Is being developed
             </h1>
         </>
     );

@@ -3,7 +3,7 @@ function Home()
     return(
         <>
             <h1>
-                Is beeing developed
+                Is being developed
             </h1> 
         </>
     );
