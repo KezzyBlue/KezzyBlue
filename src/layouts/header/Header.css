@@ -1,15 +1,40 @@
 header
 {
     display: flex;
-    align-items: center;
     justify-content: center;
+    
 }
 .headerContainer
 {
-    display: flex;
     width: 80%;
-    background-color: rgb(213, 213, 213);
-    margin-top: 40px;
-    border-radius: 30px;
-    padding: 40px;
+    background-color: rgb(221, 248, 248);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgb(205, 205, 205);
+}
+.contactContainer
+{
+    justify-content: right;
+    user-select: none;
+    display: flex;
+}
+.icon
+{
+    width: 27px;
+    padding: 8px;
+    margin: 0px 7px;
+    background-color: azure;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+a {
+    text-decoration: none;
+}
+@media (max-width: 768px) {
+    .contactContainer
+    {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 }

@@ -1,0 +1,18 @@
+footer
+{
+    margin-top: 20px;
+    font-family: "Exo 2", sans-serif;
+    width: 80%;
+    background-color: whitesmoke;
+    padding: 10px 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.08);
+    color:rgb(76, 86, 86);
+    text-align: center;
+    border: 1px solid rgb(205, 205, 205);
+    user-select: none;
+}
+b
+{
+    margin: 0px 15px;
+}

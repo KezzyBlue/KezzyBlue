@@ -8,7 +8,6 @@
     position: absolute;
     inset: 0;         
     width: 100%;
-    height: 100%;
 }
 
 .avatar{
@@ -72,11 +71,11 @@
 .activitiesContainer {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     position: absolute;
-    top: 20%;
-    left: 120%;
-    min-width: 300px;
+    top: 110%;
+    left: 0%;
+    min-width: 180px;
     padding: 5px 20px;
-    border: 6px dashed rgb(88, 88, 88);
+    border: 6px dashed rgba(141, 140, 140, 0.655);
     border-radius: 18px;
     background-color: rgb(250, 255, 255);
 }
@@ -94,8 +93,8 @@
 .albumArt
 {
     margin: 10px 10px;
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     border-radius: 20px;
 }
 .infoSong
@@ -117,7 +116,7 @@
     font-size: 90%;
 }
 .progress-bar {
-    width: 300px;
+    min-width: 250px;
     height: 5px;
     background: #555;
     border-radius: 999px;
@@ -136,5 +135,58 @@
 }
 .activity
 {
-    margin-left: 30px;
+    margin-left: 10px;
+}
+.userInfoContainer
+{
+    font-family: "Exo 2", sans-serif;
+    display: flex;
+}
+.userInfo
+{
+    display: flex;
+    margin-left: 20px;
+    width: 80%;
+    flex-direction: column;
+    justify-content: center;
+}
+.userInfo h1
+{
+    margin: 0px;
+}
+.line{
+    height: 5px;
+    background-color: #555;
+    border-radius: 999px;
+    margin-top: 5px;
+}
+.introduce
+{
+    margin-top: 10px;
+    font-size: 110%;
+}
+@media (max-width: 768px) {
+    .activitiesContainer{
+        left: -50%;
+        font-style: 90%;
+        
+    }
+    .progress-bar
+    {
+        min-width: 180px;
+    }
+    .userInfoContainer
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+    .userInfo
+    {
+        margin-top: 20px;
+        text-align: center;
+        margin: 20px auto;
+    }
+    .userInfo h1{
+        font-size: 100%;
+    }
 }

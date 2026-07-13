@@ -1,0 +1,27 @@
+[
+    {
+        "name": "Facebook",
+        "icon": "https://simpleicons.org/icons/facebook.svg",
+        "link": "https://www.facebook.com/KezzyBlueVN"
+    },
+    {
+        "name": "Discord",
+        "icon": "https://simpleicons.org/icons/discord.svg",
+        "link": "https://discordapp.com/users/812486503572832327"
+    },
+    {
+        "name": "Youtube",
+        "icon": "https://simpleicons.org/icons/youtube.svg",
+        "link": "https://www.youtube.com/@KezzyBlue"
+    },
+    {
+        "name": "Github",
+        "icon": "https://simpleicons.org/icons/github.svg",
+        "link": "https://github.com/KezzyBlue"
+    },
+    {
+        "name": "Gmail",
+        "icon": "https://simpleicons.org/icons/gmail.svg",
+        "link": "mailto:kezzyblue@gmail.com"
+    }
+]

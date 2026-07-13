@@ -8,6 +8,19 @@ function UserInfo() {
     const [userData, setUserData] = useState(null);
     const [avatarFrame, setAvatarFrame] = useState(null);
     const [avatar, setAvatar] = useState(null);
+    const [introduce, setIntroduce] = useState("");
+
+    const fetchIntroduce = async () =>
+    {
+        try{
+            const response = await axios.get("user/introduce/introduce.json");
+            setIntroduce(response.data.about);
+        }
+        catch(error)
+        {
+            console.log(error);
+        }
+    }
 
     const fetchData = async () => {
         try {
@@ -23,6 +36,7 @@ function UserInfo() {
 
     useEffect(() => {
         fetchData();
+        fetchIntroduce();
         const interval = setInterval(fetchData, 1000);
         return () => clearInterval(interval);
     }, []);
@@ -84,20 +98,27 @@ function UserInfo() {
 
 
     return (
-        <div className="avatarContainer" onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
-            <img src={avatar} className="avatar" />
-            <img src={avatarFrame} className="avatarFrame" />
-            <div className={`status ${userData?.discord_status}`}>
-                {userData?.discord_status === "online" && (<div className="pulse"></div>)}
-            </div>
-            {hover && userData?.activities?.length > 1 && (
-                <div className="activitiesContainer">
-                    <b> May be online!! </b>
-                    <ul>
-                        {userData.activities.slice(1).map((activity, index) => activitiesList(activity, index))}
-                    </ul>
+        <div className = "userInfoContainer">
+            <div className="avatarContainer" onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
+                <img src={avatar} className="avatar" />
+                <img src={avatarFrame} className="avatarFrame"/>
+                <div className={`status ${userData?.discord_status}`}>
+                    {userData?.discord_status === "online" && (<div className="pulse"></div>)}
                 </div>
-            )}
+                {hover && userData?.activities?.length > 1 && (
+                    <div className="activitiesContainer">
+                        <b> May be online!! </b>
+                        <ul>
+                            {userData.activities.slice(1).map((activity, index) => activitiesList(activity, index))}
+                        </ul>
+                    </div>
+                )}
+            </div>
+            <div className = "userInfo">
+                <h1> Yup, {userData?.discord_user.display_name} here!! </h1>
+                <div className = "line"> </div>
+                <p className = "introduce">  {introduce} </p>
+            </div>
         </div>
     );
 }

@@ -1,0 +1,40 @@
+.navbarContainer
+{
+    width: 100%;
+    display: flex;
+    font-family: "Exo 2", sans-serif;
+    background-color: #f1f8f5;
+    font-size: 1.25rem;
+    justify-content: left;
+    width: 80%;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 1px solid rgb(205, 205, 205);
+    align-items: center;
+}
+.active, .nonactive
+{
+    padding: 5px 20px;
+    margin-right: 17px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    border-radius: 10px;
+    color: black;
+    border: 1px solid rgb(205, 205, 205);
+}
+.nonactive:hover
+{
+    background-color: rgba(100, 100, 100, 0.666);
+    color: white;
+}
+.active
+{
+    background-color: rgb(47, 49, 47);
+    color: white;
+}
+.nonactive
+{
+    background-color: rgb(255, 255, 255);
+}
