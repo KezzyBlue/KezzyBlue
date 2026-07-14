@@ -1,0 +1,102 @@
+.homeContainer
+{
+    background-color: rgb(245, 255, 252);
+    margin-top: 20px;
+    width: 80%;
+    padding: 20px;
+    font-family: "Exo 2", sans-serif;
+    border: 1px solid rgb(205, 205, 205);
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 35% 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+    "personalDetails main"
+    "work main"
+    "education main"
+}
+.box
+{
+    font-family: "Exo 2", sans-serif;
+    border: 1px solid rgb(205, 205, 205);
+    background-color: rgb(244, 247, 246);
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 90%;
+    margin: 10px;
+    user-select: none;
+}
+.details
+{
+    margin: 10px;
+}
+.main
+{
+    grid-area: main;
+    user-select: auto;
+}
+.education
+{
+    grid-area: education;
+}
+.personalDetails
+{
+    grid-area: personalDetails;
+}
+.work
+{
+    grid-area: work;
+}
+.logo
+{
+    width: 60px;
+    border-radius: 50%;
+    border: 1px solid rgb(205, 205, 205);
+}
+.transition
+{
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease;
+}
+.transition:hover
+{
+    transform: scale(1.02);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+.school
+{
+    display: flex;
+    align-items: center;
+    background-color: rgb(234, 234, 234);
+    margin-bottom: 10px;
+    padding: 10px 10px;
+    border-radius: 20px;
+    border: 1px solid rgb(205, 205, 205);
+    user-select: none;
+}
+.schoolDetails
+{
+    margin-left: 10px;
+}
+.schoolDetails h3, p
+{
+    margin: 0;
+}
+.main p{
+    font-size: 130%;
+    margin-top: 5px;
+    margin-left: 20px;
+    margin-bottom: 15px;
+    
+}
+.main h3
+{
+    margin-left: 15px;
+    font-size: 130%;
+}
+.main a,
+.main a:visited {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}

@@ -1,0 +1,32 @@
+{
+  "fullName": "Trần Trung Hiếu",
+  "nickname": "KezzyBlue",
+  "birthday": "2008-06-03",
+  "gender": "Male",
+  "relationshipStatus": "Single",
+  "country": "Vietnam",
+
+  "education": [
+    {
+      "name": "THPT Tam Dương",
+      "image": "https://scontent.fsgn5-22.fna.fbcdn.net/v/t39.30808-6/725173308_1599810232146004_652626076421797807_n.jpg?stp=dst-jpg_tt6&cstp=mx1160x1160&ctp=s1160x1160&_nc_cat=100&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeFNvLePCxSkT8N5W9b0BBZAuNYrnMmsBbm41iucyawFuaXqMTXQ7K-4sJUmqzdTp7eB5XyCZ5-Fa48GBkfdNutx&_nc_ohc=sPApLY7qcB4Q7kNvwGsmenq&_nc_oc=Adqe1nwcwBThRd8kSt_Om2EQxaf57fh5ePwUQmpKSNqbCVC-tkXmi-4dQtLctJTvYaE&_nc_zt=23&_nc_ht=scontent.fsgn5-22.fna&_nc_gid=NUkdS0rTiGxxrEreWXy4Tw&_nc_ss=7b2a8&oh=00_AQDX9Q2Io4s-Szw_6i50daTB3rr0LfEgy6cHgX5hk1N-sw&oe=6A5C33B4",
+      "page": "https://www.facebook.com/groups/1271581707762334/user/61580700472429",
+      "note": "so peaceful time"
+    },
+    {
+      "name": "Đại học Bách khoa Hà Nội",
+      "image": "https://scontent.fhan5-9.fna.fbcdn.net/v/t39.30808-6/348420794_601602388594287_9115018395155473534_n.jpg?stp=dst-jpg_tt6&cstp=mx1358x1358&ctp=s1358x1358&_nc_cat=1&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeGUBRu2FqsnEDdlZ1lZT6R9WiSiRdCXOJRaJKJF0Jc4lNp-GYcFwfexB_Ojriznf_iOsv7Tq2eveFhVHtG813L9&_nc_ohc=DeK1ih73ePoQ7kNvwGwxANV&_nc_oc=AdpMGIQUfxxPUNytKLkrvzudxgLhGEiIP5sZ-4NzZzPjjMdFKPC7yA2PYQ1wmjDbvuY&_nc_zt=23&_nc_ht=scontent.fhan5-9.fna&_nc_gid=UiAXm6jNLI46oXJJX2YnUg&_nc_ss=7b2a8&oh=00_AQBAEu8TT1kHwZTiNBUhSLj11Yt0hRxyHRAa97J-aG_yfg&oe=6A5C27B7",
+      "page": "https://www.facebook.com/dhbkhanoi",
+      "note": "Let's go Kezzy"
+    }
+  ],
+
+  "jobs": [
+    {
+      "title": "Independent Developer"
+    },
+    {
+      "title": "Competitive Programming Tutor"
+    }
+  ]
+}
