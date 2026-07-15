@@ -1,5 +1,4 @@
-.navbarContainer
-{
+.navbarContainer {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -13,12 +12,12 @@
     border: var(--border);
     align-items: center;
 }
-.navbar
-{
+
+.navbar {
     display: flex;
 }
-.themeToggle
-{
+
+.themeToggle {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -29,8 +28,9 @@
     border-radius: 10px;
     cursor: pointer;
 }
-.active, .nonactive
-{
+
+.active,
+.nonactive {
     padding: 5px 20px;
     margin-right: 17px;
     text-align: center;
@@ -40,24 +40,104 @@
     color: var(--text1);
     border: var(--border);
 }
-.nonactive:hover
-{
+
+.nonactive:hover {
     background-color: var(--bg-hover);
     color: var(--text-hover);
 }
-.active
-{
+
+.active {
     background-color: var(--active);
     color: var(--text-hover);
 }
-.nonactive
-{
-    background-color: var(--bg1);
+
+.nonactive {
+    background-color: var(--bg2);
 }
-.themeIcon
-{
+
+.themeIcon {
     color: var(--text0);
     width: 50px;
     height: 50px;
     font-size: 1.55em;
+}
+
+.humburger {
+    display: none;
+    font-size: 1.5em;
+    border-radius: 10px;
+    width: 45px;
+    height: 45px;
+    font-weight: bold;
+    color: var(--text0);
+    background-color: var(--bg1);
+    border: var(--border);
+}
+
+.navbarMobile {
+    display: none;
+    width: 100%;
+    justify-content: center;
+    font-family: "Exo 2", sans-serif;
+    background-color: var(--bg1);
+    font-size: 1.25rem;
+    width: 80%;
+    padding: 10px 20px;
+    border: var(--border);
+    align-items: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.currentPage
+{
+    display: none;
+}
+.navbarContainer.open {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.navbarMobile.open {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+
+
+    padding: 20px;
+
+}
+
+.navbarMobile .active,
+.navbarMobile .nonactive {
+    margin: 0;
+    padding: 12px 0;
+
+    width: 100%;
+    height: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .humburger {
+        display: block;
+    }
+
+    .navbar {
+        display: none;
+        flex-direction: column;
+    }
+
+    .navbar.show {
+        display: flex;
+    }
+    .currentPage
+    {
+        font-size: 90%;
+        display: block;
+    }
 }
