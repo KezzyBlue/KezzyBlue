@@ -29,6 +29,19 @@
     bottom: 12px;
     right: 12px;
 }
+span
+{
+    color: var(--text1);
+}
+p
+{
+    color: var(--text2);
+}
+b
+{
+    color: var(--text0);
+}
+
 
 .online{
     background-color: #2abd67;
@@ -77,7 +90,7 @@
     padding: 5px 20px;
     border: 6px dashed rgba(141, 140, 140, 0.655);
     border-radius: 18px;
-    background-color: rgb(250, 255, 255);
+    background-color: var(--bg1);
 }
 .activitiesContainer ul {
     list-style: none;
@@ -85,6 +98,7 @@
 }
 .activitiesContainer li::before {
     content: "◆";
+    color: var(--text1);
     margin-right: 8px;
 }
 .activitiesContainer li p{
@@ -156,7 +170,7 @@
 }
 .line{
     height: 5px;
-    background-color: #555;
+    background-color: var(--text2);
     border-radius: 999px;
     margin-top: 5px;
 }

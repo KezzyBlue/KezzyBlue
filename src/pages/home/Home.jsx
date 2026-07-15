@@ -56,7 +56,7 @@ function Home() {
                     <h1> Education </h1>
                     {
                         profile.education.map((school, index) => (
-                            <div key = "index" className = "school">
+                            <div key = {index} className = "school">
                                 <a href = {school.page} target = "_blank"> <img src = {school.image} className = "logo"/> </a>
                                 <div className = "schoolDetails">
                                     <h3> {school.name}</h3>

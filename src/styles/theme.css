@@ -3,7 +3,7 @@
     --background-image: url("/image/background-light.png");
 
     --bg0: rgb(255, 255, 255);
-    --bg1: rgba(242, 248, 249, 0.308);
+    --bg1: rgb(242, 248, 249);
     --bg2: rgba(234, 234, 234, 0.542);
 
     --text0: black;
@@ -13,15 +13,16 @@
 
     --bg-hover: rgba(94, 94, 94, 0.793);
     --text-hover: white;
-    
+
     --active: rgb(47, 49, 47);
 }
+
 [data-theme="dark"]
 {
     --background-image: url("/image/background-dark.png");
 
     --bg0: rgb(15, 23, 42);
-    --bg1: rgba(30, 41, 59, 0.75);
+    --bg1: rgb(30, 41, 59);
     --bg2: rgba(51, 65, 85, 0.55);
 
     --text0: rgb(248, 250, 252);
@@ -32,5 +33,27 @@
     --bg-hover: rgba(96, 165, 250, 0.18);
     --text-hover: rgb(255, 255, 255);
 
-    --active: rgb(96, 165, 250);
+    --active: rgb(0, 62, 138);
+}
+
+
+*,
+*::before,
+*::after {
+    transition:
+        background-color 0.35s ease,
+        color 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease,
+        filter 0.35s ease,
+        opacity 0.35s ease;
+}
+
+[data-theme="dark"] .icon {
+    filter:
+        brightness(0)
+        invert(95%)
+        sepia(5%)
+        saturate(100%)
+        hue-rotate(180deg);
 }

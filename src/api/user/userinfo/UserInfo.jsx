@@ -1,7 +1,7 @@
 import axios from "axios";
 import { use, useDebugValue, useEffect, useState } from "react";
 import './UserInfo.css';
-
+import '../../../styles/theme.css'
 function UserInfo() {
     const userId = "812486503572832327";
 
