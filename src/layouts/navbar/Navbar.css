@@ -121,7 +121,9 @@
 
     box-sizing: border-box;
 }
-
+h2{
+    color: var(--text0);
+}
 @media (max-width: 768px) {
     .humburger {
         display: block;
