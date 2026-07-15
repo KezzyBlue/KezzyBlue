@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import UserInfo from "../../api/user/userinfo/UserInfo.jsx";
 import axios from "axios";
 import "./Header.css"
+import '../../styles/theme.css';
 function Header()
 {
     const [contact, setContact] = useState([]);

@@ -1,5 +1,5 @@
 import './Footer.css';
-
+import '../../styles/theme.css';
 function Footer()
 {
     return (

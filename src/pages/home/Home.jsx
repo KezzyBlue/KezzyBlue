@@ -1,6 +1,7 @@
 import './Home.css';
 import { useState, useEffect } from 'react';
 import axios from 'axios'
+import '../../styles/theme.css';
 function Home() {
     const [profile, setProfile] = useState(null);
     const [timeLived, setTimeLived] = useState(null);

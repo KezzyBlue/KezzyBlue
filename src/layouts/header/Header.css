@@ -7,11 +7,11 @@ header
 .headerContainer
 {
     width: 80%;
-    background-color: rgb(221, 248, 248);
+    background-color: var(--bg0);
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.08);
-    border: 1px solid rgb(205, 205, 205);
+    border: var(--border);
 }
 .contactContainer
 {
@@ -21,10 +21,12 @@ header
 }
 .icon
 {
+    text: var(--text0);
     width: 27px;
     padding: 8px;
     margin: 0px 7px;
-    background-color: azure;
+    background-color: var(--bg2);
+    border: var(--border);
     border-radius: 50%;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }

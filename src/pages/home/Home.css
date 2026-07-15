@@ -1,11 +1,11 @@
 .homeContainer
 {
-    background-color: rgb(245, 255, 252);
+    background-color: var(--bg0);
     margin-top: 20px;
     width: 80%;
     padding: 20px;
     font-family: "Exo 2", sans-serif;
-    border: 1px solid rgb(205, 205, 205);
+    border: var(--border);
     border-radius: 20px;
     display: grid;
     grid-template-columns: 35% 1fr;
@@ -18,8 +18,8 @@
 .box
 {
     font-family: "Exo 2", sans-serif;
-    border: 1px solid rgb(205, 205, 205);
-    background-color: rgb(244, 247, 246);
+    border: var(--border);
+    background-color: var(--bg1);
     border-radius: 30px;
     padding: 10px 20px;
     font-size: 90%;
@@ -51,7 +51,7 @@
 {
     width: 60px;
     border-radius: 50%;
-    border: 1px solid rgb(205, 205, 205);
+    border: var(--border);
 }
 .transition
 {
@@ -67,11 +67,11 @@
 {
     display: flex;
     align-items: center;
-    background-color: rgb(234, 234, 234);
+    background-color: var(--bg2);
     margin-bottom: 10px;
     padding: 10px 10px;
     border-radius: 20px;
-    border: 1px solid rgb(205, 205, 205);
+    border: var(--border);
     user-select: none;
 }
 .schoolDetails
@@ -96,7 +96,25 @@
 }
 .main a,
 .main a:visited {
-    color: black;
+    color: var(--text0);
     text-decoration: none;
     font-weight: bold;
+}
+@media (max-width: 768px)
+{
+    .homeContainer
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+h1{
+    color: var(--text0);
+}
+h3{
+    color: var(--text1);
+}
+p{
+    color: var(--text2);
 }

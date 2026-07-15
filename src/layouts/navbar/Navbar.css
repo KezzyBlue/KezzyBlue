@@ -2,16 +2,32 @@
 {
     width: 100%;
     display: flex;
+    justify-content: space-between;
     font-family: "Exo 2", sans-serif;
-    background-color: #f1f8f5;
+    background-color: var(--bg0);
     font-size: 1.25rem;
-    justify-content: left;
     width: 80%;
     padding: 10px 20px;
     margin-top: 10px;
     border-radius: 10px;
-    border: 1px solid rgb(205, 205, 205);
+    border: var(--border);
     align-items: center;
+}
+.navbar
+{
+    display: flex;
+}
+.themeToggle
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    padding: 10px;
+    border: var(--border);
+    background-color: var(--bg1);
+    border-radius: 10px;
+    cursor: pointer;
 }
 .active, .nonactive
 {
@@ -21,20 +37,25 @@
     align-items: center;
     display: flex;
     border-radius: 10px;
-    color: black;
-    border: 1px solid rgb(205, 205, 205);
+    color: var(--text1);
+    border: var(--border);
 }
 .nonactive:hover
 {
-    background-color: rgba(100, 100, 100, 0.666);
-    color: white;
+    background-color: var(--bg-hover);
+    color: var(--text-hover);
 }
 .active
 {
-    background-color: rgb(47, 49, 47);
-    color: white;
+    background-color: var(--active);
+    color: var(--text-hover);
 }
 .nonactive
 {
-    background-color: rgb(255, 255, 255);
+    background-color: var(--bg1);
+}
+.themeIcon
+{
+    color: var(--text0);
+    width: 20px;
 }
