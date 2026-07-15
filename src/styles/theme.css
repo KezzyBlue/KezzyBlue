@@ -1,6 +1,6 @@
 :root
 {
-    --background-image: url("./image/background-light.png");
+    --background-image: url("/image/background-light.png");
 
     --bg0: rgb(255, 255, 255);
     --bg1: rgba(242, 248, 249, 0.308);
@@ -18,7 +18,7 @@
 }
 [data-theme="dark"]
 {
-    --background-image: url("./image/background-dark.png");
+    --background-image: url("/image/background-dark.png");
 
     --bg0: rgb(15, 23, 42);
     --bg1: rgba(30, 41, 59, 0.75);
