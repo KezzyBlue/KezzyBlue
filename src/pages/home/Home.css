@@ -100,8 +100,15 @@
     {
         display: flex;
         flex-direction: column;
+        font-size: 80%;
     }
 
+}
+
+@media (max-width: 480px) {
+    .homeContainer {
+        font-size: 70%;
+    }
 }
 h1{
     color: var(--text0);
