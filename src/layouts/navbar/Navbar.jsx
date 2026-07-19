@@ -44,7 +44,7 @@ function Navbar({ theme, setTheme }) {
                 <button className="humburger" onClick={() => toggle()}> {open ? "✕" : "☰"} </button>
                 
                 <h2 className="currentPage">
-                    {window.innerWidth < 768 ? currentRoute?.title : ""}
+                    {window.innerWidth < 768 ? (currentRoute?.title) : ""}
                 </h2>
                 <div className="navbar">
                     {routes

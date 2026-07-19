@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Intro",
+        "id": "intro"
+    },
+    {
+        "name": "Work",
+        "id": "work"
+    },
+    {
+        "name": "Education",
+        "id": "education"
+    },
+    {
+        "name": "Hobbies",
+        "id": "hobbies"
+    },
+    {
+        "name": "Interest",
+        "id": "interest"
+    }
+]

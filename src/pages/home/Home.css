@@ -1,12 +1,5 @@
 .homeContainer
 {
-    background-color: var(--bg0);
-    margin-top: 20px;
-    width: 80%;
-    padding: 20px;
-    font-family: "Exo 2", sans-serif;
-    border: var(--border);
-    border-radius: 20px;
     display: grid;
     grid-template-columns: 35% 1fr;
     grid-template-rows: auto auto auto;
