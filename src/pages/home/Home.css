@@ -6,7 +6,8 @@
     grid-template-areas:
     "personalDetails main"
     "work main"
-    "education main"
+    "education main";
+    font-size: 90%;
 }
 .box
 {
