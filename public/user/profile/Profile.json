@@ -8,16 +8,34 @@
 
   "education": [
     {
+      "name": "THPT Chuyên Hùng Vương",
+      "image": "https://ik.imagekit.io/ofdnnpbgza/584293715_122094148131133612_6352235504496671445_n.jpg",
+      "page": "https://www.facebook.com/profile.php?id=61583663196074",
+      "note": "VOI 26",
+      "start": "2025-10-1",
+      "end": "2026-1-1",
+      "tag": "highschool",
+      "home": "hide"
+    },
+    {
       "name": "THPT Tam Dương",
       "image": "https://ik.imagekit.io/ofdnnpbgza/725173308_1599810232146004_652626076421797807_n.jpg",
       "page": "https://www.facebook.com/groups/1271581707762334/user/61580700472429",
-      "note": "Sweetest time ever"
+      "note": "Sweetest time ever",
+      "start": "2023",
+      "end": "2026",
+      "tag": "highschool",
+      "home": "show"
     },
     {
       "name": "Đại học Bách khoa Hà Nội",
       "image": "https://ik.imagekit.io/ofdnnpbgza/348420794_601602388594287_9115018395155473534_n.jpg",
       "page": "https://www.facebook.com/dhbkhanoi",
-      "note": "promising..."
+      "note": "promising...",
+      "start": "2026",
+      "end": "null",
+      "tag": "university",
+      "home": "show"
     }
   ],
 

@@ -9,6 +9,13 @@ p
 {
     margin-left: 10px;
 }
+.hor-line
+{
+    width: 50%;
+    display: flex;
+    height: 2px;
+    background-color: var(--text2);
+}
 .vernav
 {
     background-color: var(--bg1);
