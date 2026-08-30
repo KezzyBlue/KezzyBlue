@@ -1,0 +1,62 @@
+[
+    {
+        "name" : "Như Mah (Premium)",
+        "artist" : "Ân Ngờ, Hayho",
+        "src" : "/music/src/music1.mp3"
+    },
+    {
+        "name" : "DAOBUOCHONGKONG1999",
+        "artist" : "MCK",
+        "src" : "/music/src/music2.mp3"
+    },
+    {
+        "name" : "Tháp rơi tự do",
+        "artist" : "MinhAk",
+        "src" : "/music/src/music3.mp3"
+    },
+    {
+        "name" : "Wrong time",
+        "artist" : "puppy, Dangrangto",
+        "src" : "/music/src/music4.mp3"
+    },
+    {
+        "name" : "60m vuông",
+        "artist" : "Thắng",
+        "src" : "/music/src/music5.mp3"
+    },
+    {
+        "name" : "13 Rat2010 (Rất demo)",
+        "artist" : "Thắng, SUNI",
+        "src" : "/music/src/music6.mp3"
+    },
+    {
+        "name" : "Limo",
+        "artist" : "Thắng",
+        "src" : "/music/src/music7.mp3"
+    },
+    {
+        "name" : "Đã xem",
+        "artist" : "Thắng",
+        "src" : "/music/src/music8.mp3"
+    },
+    {
+        "name" : "Đốt",
+        "artist" : "Ngọt",
+        "src" : "/music/src/music9.mp3"
+    },
+    {
+        "name" : "Tìm người nhà",
+        "artist" : "Ngọt",
+        "src" : "/music/src/music10.mp3"
+    },
+    {
+        "name" : "I Want You to Tell Me the Moon is Beautiful!",
+        "artist" : "yuta kakizaki",
+        "src" : "/music/src/music11.mp3"
+    },
+    {
+        "name" : "Bầu trời mới",
+        "artist" : "Da Lab ft Minh Tốc, Lam",
+        "src" : "/music/src/music12.mp3"
+    }
+]

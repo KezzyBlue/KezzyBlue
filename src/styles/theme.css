@@ -1,0 +1,99 @@
+:root {
+
+    --bg0: rgb(250, 253, 255);
+    --bg1: rgb(238, 248, 255);
+    --bg2: rgba(208, 232, 248, 0.72);
+
+    --text0: rgb(18, 48, 74);
+    --text1: rgb(35, 68, 95);
+    --text2: rgb(75, 102, 128);
+    --border: 1px solid rgb(185, 215, 234);
+
+    --bg-hover: rgb(75, 157, 221);
+    --text-hover: rgb(255, 255, 255);
+
+    --active: rgb(24, 119, 185);
+
+    --musicHover: rgb(79, 110, 126);
+    --musicActive: rgb(23, 111, 168);
+    --primary: rgb(54, 145, 255);
+    --primary-soft: rgb(141, 213, 255);
+    --shadow: rgba(24, 83, 125, 0.14);
+    --status-online: rgb(42, 189, 103);
+    --status-idle: rgb(240, 178, 50);
+    --status-dnd: rgb(242, 63, 67);
+    --status-offline: rgb(128, 132, 142);
+    --rating-high: rgb(210, 55, 72);
+    --rating-orange: rgb(218, 121, 42);
+    --rating-purple: rgb(132, 76, 163);
+    --rating-blue: rgb(40, 111, 207);
+    --rating-teal: rgb(22, 143, 137);
+    --rating-green: rgb(36, 139, 86);
+    --rating-muted: rgb(104, 123, 140);
+    --video-overlay:
+        linear-gradient(to top,
+                rgba(250, 253, 255, 0.80) 0%,
+                rgba(238, 248, 255, 0.45) 35%,
+                rgba(208, 232, 248, 0.15) 70%,
+                rgba(208, 232, 248, 0.05) 100%);
+            --card: rgba(185, 225, 247, 0.70);
+}
+
+[data-theme="dark"] {
+
+    --bg0: rgb(17, 28, 39);
+    --bg1: rgb(24, 41, 56);
+    --bg2: rgba(52, 77, 96, 0.62);
+
+    --text0: rgb(235, 246, 255);
+    --text1: rgb(211, 231, 246);
+    --text2: rgb(157, 184, 204);
+    --border: 1px solid rgb(67, 101, 124);
+
+    --bg-hover: rgb(46, 126, 181);
+    --text-hover: rgb(255, 255, 255);
+
+    --active: rgb(27, 103, 157);
+
+    --musicHover: rgb(34, 88, 116);
+    --musicActive: rgb(22, 96, 142);
+    --primary: rgb(105, 190, 255);
+    --primary-soft: rgb(67, 143, 190);
+    --shadow: rgba(0, 9, 16, 0.34);
+    --status-online: rgb(45, 207, 115);
+    --status-idle: rgb(246, 190, 67);
+    --status-dnd: rgb(255, 83, 87);
+    --status-offline: rgb(142, 148, 158);
+    --rating-high: rgb(255, 112, 126);
+    --rating-orange: rgb(255, 166, 91);
+    --rating-purple: rgb(207, 132, 225);
+    --rating-blue: rgb(112, 177, 255);
+    --rating-teal: rgb(75, 207, 198);
+    --rating-green: rgb(91, 206, 139);
+    --rating-muted: rgb(166, 187, 202);
+    --video-overlay:
+        linear-gradient(to top,
+                rgba(17, 28, 39, 0.92) 0%,
+                rgba(24, 41, 56, 0.65) 35%,
+                rgba(24, 41, 56, 0.30) 70%,
+                rgba(24, 41, 56, 0.12) 100%);
+            --card: rgba(44, 83, 108, 0.70);
+}
+
+
+*,
+*::before,
+*::after {
+    transition:
+        background-color 0.15s ease,
+        color 0.15s ease,
+        border-color 0.15s ease,
+        box-shadow 0.15s ease,
+        filter 0.15s ease,
+        opacity 0.15s ease;
+}
+
+[data-theme="dark"] .icon {
+    filter:
+        brightness(0) invert(95%) sepia(5%) saturate(100%) hue-rotate(180deg);
+}

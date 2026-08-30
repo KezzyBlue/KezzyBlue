@@ -1,0 +1,15 @@
+.container
+{
+    padding: 20px;
+    background-color: var(--bg0);
+    margin-top: 20px;
+    border-radius: 10px;
+    width: 80%;
+    border: var(--border);
+}
+@media (max-width: 768px)
+{
+    .container{
+        width: 90%;
+    }
+}

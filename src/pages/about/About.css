@@ -1,0 +1,275 @@
+.aboutContainer
+{
+    display: grid;
+    grid-template-columns: 20% 1fr;
+    grid-template-rows: auto;
+    gap: 20px 20px;
+    font-family: "Exo 2", sans-serif;
+}
+p
+{
+    margin-left: 10px;
+}
+.hor-line
+{
+    width: 50%;
+    display: flex;
+    height: 2px;
+    background-color: var(--text2);
+    margin-bottom: 10px;
+}
+.school-icon
+{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid var(--border);
+    box-shadow: 0px 0px 10px var(--shadow);
+}
+.school-info
+{
+    margin: 5px;
+}
+.achievements{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:32px;
+}
+
+.achieve-card{
+    background: var(--bg0);
+    border-radius:24px;
+    padding:28px;
+    box-shadow:0 10px 30px var(--shadow);
+    transition:.25s;
+    width: 350px;
+    text-align:center;
+}
+
+.achieve-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 20px 40px var(--shadow);
+}
+
+.card-header{
+    text-align:center;
+    margin-bottom:24px;
+}
+
+.card-header h2{
+    margin:0;
+    font-size:2rem;
+}
+
+
+.card-body{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:18px;
+}
+
+.card-image{
+    width: 40%;
+    object-fit:cover;
+    border-radius:20px;
+}
+
+.stats{
+    display:flex;
+    justify-content:space-between;
+    width:100%;
+    margin-top:10px;
+}
+
+.stat{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.value{
+    font-size:1.5rem;
+    font-weight:700;
+}
+
+.label{
+    color: var(--text2);
+    font-size:.9rem;
+}
+.school-info i
+{
+    margin: 10px;
+    color: var(--text2);
+}
+.vernav
+{
+    background-color: var(--bg1);
+    border-radius: 20px;
+    border: var(--border);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.info
+{
+    background-color: var(--bg1);
+    border-radius: 20px;
+    border: var(--border);
+    padding: 20px;
+}
+.flex{
+    display: flex;
+    gap: 20px;
+}
+.s1
+{
+    width:55%;
+}
+.s2
+{
+    width: 45%;
+}
+.vernav .buttonn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 10px 20px;
+    margin-bottom: 10px;
+
+    border: var(--border);
+    background-color: var(--bg2);
+    color: var(--text1);
+
+    border-radius: 10px;
+
+    font-family: "Exo 2", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.2;
+
+    text-decoration: none;
+
+    cursor: pointer;
+    user-select: none;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background-color 0.25s ease,
+        color 0.25s ease;
+}
+.button-container
+{
+    display: flex;
+    flex-direction: column;
+}
+.vernav .buttonn:hover {
+    background-color: var(--bg-hover);
+    color: var(--text-hover);
+    box-shadow: 0 6px 16px var(--shadow);
+}
+
+.vernav .buttonn.active {
+    font-family: "Exo 2", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.2;
+
+    background-color: var(--active);
+    color: var(--text-hover);
+
+    box-shadow: 0 8px 18px var(--shadow);
+}
+h1{
+    margin-top: 10px;
+}
+li{
+    color: var(--text2);
+}
+.about-school{
+    display: flex;
+    align-items: center;
+    background-color: var(--bg2);
+    margin-bottom: 10px;
+    padding: 10px 10px;
+    border-radius: 20px;
+    border: var(--border);
+    user-select: none;
+}
+.boxs
+{
+    user-select: auto;
+    background-color: var(--bg2);
+    font-size: 101%;
+    border-radius: 20px;
+    border: var(--border);
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+    font-family: "Exo 2", sans-serif;
+    font-weight: bold;
+
+    box-shadow:
+        0 1px 2px var(--shadow),
+        0 4px 12px var(--shadow),
+        0 12px 30px var(--shadow);
+}
+.achievements
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+@media (max-width: 768px)
+{
+    .aboutContainer
+    {
+        display: flex;
+        flex-direction: column;
+    }
+    .flex{
+        display: flex;
+        flex-direction: column;
+    }
+    .boxs{
+        font-size: 70%;
+    }
+    .s1
+    {
+        width:auto;
+    }
+    .s2
+    {
+        width: auto;
+    }
+    .stats
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+    .stat
+    {
+        margin-bottom: 10px;
+    }
+    .card-body
+    {
+        gap: 10px;
+        text-align: center;
+    }
+    .about-school{
+        font-size: 60%;
+    }
+    .about-school b{
+        font-size: 90%;
+    }
+    .about-school img{
+        width: 80px;
+        height: 80px;
+    }
+}

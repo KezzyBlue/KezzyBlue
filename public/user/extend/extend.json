@@ -1,0 +1,11 @@
+{
+    "banner" : "/image/banner/jinx.gif",
+    "animation" : 
+    [ 
+        "https://cdn.discordapp.com/media/v1/collectibles-shop/8274a57f4d55d382e3ab04ea178d274456bc397a7f2846f07962de8e01593b68",
+        "https://cdn.discordapp.com/media/v1/collectibles-shop/52385aff9666affe84b73f56e8ebccba906df0978ee93ed56301c7fb1c890af0",
+        "https://cdn.discordapp.com/media/v1/collectibles-shop/ff91e837fc27b6147481ab8bfef2769c45e13bfffaf60bf8931f10def33c10db"
+    ],
+    "mainLayout": "https://cdn.discordapp.com/media/v1/collectibles-shop/331c793ab3f70e183a9ae821992aa490fa22767740da0b0f27ba2d4cdb17783a"
+}
+

@@ -1,0 +1,53 @@
+{
+  "fullName": "Trần Trung Hiếu",
+  "nickname": "KezzyBlue",
+  "birthday": "2008-06-03",
+  "gender": "Male",
+  "relationshipStatus": "Looking for new things",
+  "country": "Vietnam",
+
+  "education": [
+    {
+      "name": "THPT Chuyên Hùng Vương",
+      "image": "https://ik.imagekit.io/ofdnnpbgza/584293715_122094148131133612_6352235504496671445_n.jpg",
+      "page": "https://www.facebook.com/profile.php?id=61583663196074",
+      "note": "VOI 26",
+      "start": "2025-10-1",
+      "end": "2026-1-1",
+      "tag": "highschool",
+      "home": "hide",
+      "info": "VOI 26"
+    },
+    {
+      "name": "THPT Tam Dương",
+      "image": "https://ik.imagekit.io/ofdnnpbgza/725173308_1599810232146004_652626076421797807_n.jpg",
+      "page": "https://www.facebook.com/groups/1271581707762334/user/61580700472429",
+      "note": "Sweetest time ever",
+      "start": "2023-9-1",
+      "end": "2026-5-25",
+      "tag": "highschool",
+      "home": "show",
+      "info": "beat this school"
+    },
+    {
+      "name": "Đại học Bách khoa Hà Nội",
+      "image": "https://ik.imagekit.io/ofdnnpbgza/348420794_601602388594287_9115018395155473534_n.jpg",
+      "page": "https://www.facebook.com/dhbkhanoi",
+      "note": "promising...",
+      "start": "2026-8-26",
+      "end": "2030",
+      "tag": "university",
+      "home": "show",
+      "info": "direct university admission 😎😎😎😎"
+    }
+  ],
+
+  "jobs": [
+    {
+      "title": "Independent Developer"
+    },
+    {
+      "title": "Competitive Programming Tutor"
+    }
+  ]
+}

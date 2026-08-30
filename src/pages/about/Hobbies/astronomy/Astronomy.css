@@ -1,0 +1,181 @@
+.astronomyPage {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.astroHeader {
+    margin-bottom: 5px;
+    margin-top: 20px;
+}
+
+.astroTitle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 250%;
+    margin-bottom: 10px;
+}
+
+.astroIcon {
+    width: 50px;
+    height: 50px;
+}
+
+.astroHeader p {
+    margin: 0;
+    color: var(--text2);
+    line-height: 1.6;
+}
+
+.hor-line {
+    width: 50%;
+    max-width: 220px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--primary), transparent);
+    border-radius: 999px;
+    margin: 0 0 4px;
+}
+
+.skyInfo
+{
+    width: 100%;
+    display: flex;
+    gap: 20px;
+}
+
+.astroNote
+{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 18px 18px 14px;
+    border-radius: 20px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.24), rgba(255, 255, 255, 0.04));
+    border: 1px solid var(--border);
+    box-shadow: 0 16px 32px var(--shadow);
+    backdrop-filter: blur(12px);
+}
+.astroNote span
+{
+    margin: 10px 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.astroIconBlue
+{
+    color: rgb(22, 149, 252);
+    width: 5%;
+    height: 5%;
+}
+
+.astroRecordContainer
+{
+    justify-content: center;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 18px 18px 14px;
+    border-radius: 20px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.24), rgba(255, 255, 255, 0.04));
+    border: 1px solid var(--border);
+    box-shadow: 0 16px 32px var(--shadow);
+    backdrop-filter: blur(12px);
+}
+
+.astroRecord
+{
+    width: 40%;
+    aspect-ratio: 9 / 14;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 15px;
+}
+
+.astroLabel
+{
+    margin: 0 0 4px;
+    color: var(--text2);
+    font-size: 0.9rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.astroMd
+{
+    width: fit-content;
+    background-color: rgba(141, 213, 255, 0.15);
+    padding: 5px 10px;
+    border-radius: 20px;
+    border: var(--border);
+}
+
+.astroGallery
+{
+    gap: 20px;
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    gap: 40px;
+}
+
+
+@media (max-width: 768px) {
+    .skyInfo{
+        flex-direction: column;
+    }
+
+    .astroTitle {
+        font-size: 180%;
+    }
+
+    .weatherCard {
+        width: 100%;
+    }
+
+    .weatherStats {
+        grid-template-columns: 1fr;
+    }
+
+    .tonightSkyCard {
+        width: 100%;
+    }
+
+    .skyDetailRow {
+        grid-template-columns: 1fr;
+    }
+    .astroNote span
+    {
+        font-size: 80%;
+    }
+    .astroIconBlue
+    {
+        width: 10%;
+        height: 10%;
+    }
+    .astroLabel
+    {
+        font-size: 80%;
+    }
+    .astroRecord
+    {
+        border-radius: 10px;
+    }
+    .astroGallery
+    {
+        gap: 10px;
+        width: 120%;
+    }
+}

@@ -1,0 +1,149 @@
+.navbarContainer {
+    display: flex;
+    justify-content: space-between;
+    font-family: "Exo 2", sans-serif;
+    background-color: var(--bg0);
+    font-size: 1.25rem;
+    width: 80%;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: var(--border);
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+}
+
+.themeToggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border: var(--border);
+    background-color: var(--bg1);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.active,
+.nonactive {
+    padding: 5px 20px;
+    font-size: 80%;
+    margin-right: 17px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    border-radius: 10px;
+    color: var(--text1);
+    border: var(--border);
+}
+
+.nonactive:hover {
+    background-color: var(--bg-hover);
+    color: var(--text-hover);
+}
+
+.active {
+    background-color: var(--active);
+    color: var(--text-hover);
+}
+
+.nonactive {
+    background-color: var(--bg2);
+}
+
+.themeIcon {
+    color: var(--text0);
+    width: 40px;
+    height: 40px;
+    font-size: 120%;
+}
+
+.humburger {
+    display: none;
+    font-size: 1.5em;
+    border-radius: 10px;
+    width: 45px;
+    height: 45px;
+    font-weight: bold;
+    color: var(--text0);
+    background-color: var(--bg1);
+    border: var(--border);
+}
+
+.navbarMobile {
+    display: none;
+    width: 100%;
+    justify-content: center;
+    font-family: "Exo 2", sans-serif;
+    background-color: var(--bg1);
+    font-size: 1.25rem;
+    width: 90%;
+    padding: 10px 20px;
+    border: var(--border);
+    align-items: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.currentPage
+{
+    display: none;
+}
+.navbarContainer.open {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.navbarMobile.open {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+
+
+    padding: 20px;
+
+}
+
+.navbarMobile .active,
+.navbarMobile .nonactive {
+    margin: 0;
+    padding: 12px 0;
+
+    width: 100%;
+    height: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-sizing: border-box;
+}
+h2{
+    color: var(--text0);
+}
+@media (max-width: 768px) {
+        
+    .humburger {
+        display: block;
+    }
+
+    .navbar {
+        display: none;
+        flex-direction: column;
+    }
+
+    .navbar.show {
+        display: flex;
+    }
+    .currentPage
+    {
+        font-size: 90%;
+        display: block;
+    }
+    .navbarContainer
+    {
+        width: 90%;
+    }
+}

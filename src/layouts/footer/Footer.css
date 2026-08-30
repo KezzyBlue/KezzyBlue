@@ -1,0 +1,25 @@
+footer
+{
+    margin-top: 20px;
+    font-family: "Exo 2", sans-serif;
+    width: 80%;
+    background-color: var(--bg0);
+    padding: 20px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 4px var(--shadow);
+    color: var(--text2);
+    text-align: center;
+    border: var(--border);
+    user-select: none;
+}
+b
+{
+    margin: 0px 15px;
+}
+@media (max-width: 768px)
+{
+    footer{
+        font-size: 70%;
+        width: 90%;
+    }
+}

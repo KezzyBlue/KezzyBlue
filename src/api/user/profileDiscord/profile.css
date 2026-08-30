@@ -1,0 +1,382 @@
+.profileExtend {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px) !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profileContainer {
+    position: relative;
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    background: linear-gradient(var(--bg0), var(--bg0)) padding-box,
+                linear-gradient(to bottom, #3691ff, #e7a0ff) border-box;
+    border: 4px solid transparent;
+    width: 400px;
+    height: 95%;
+    opacity: 0;
+    transform: translateY(10px);
+
+    animation: boxAppear 0.7s cubic-bezier(.34, 1.56, .64, 1) forwards;
+}
+
+@keyframes boxAppear {
+    0% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(-12px) scale(1.02);
+    }
+
+    70% {
+        transform: translateY(5px) scale(0.99);
+    }
+
+    85% {
+        transform: translateY(-3px) scale(1.005);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.profileHeader {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #3691ff;
+}
+
+.profileBanner {
+    display: block;
+    width: 100%;
+    height: auto;
+
+    border-radius: 10px 10px 0 0;
+}
+
+.avatarProfileContainer {
+    position: absolute;
+
+    
+    left: 8%;
+    bottom: -30px;
+
+    width: 30%;
+    aspect-ratio: 1;
+
+    box-sizing: border-box;
+
+    border: clamp(4px, 1vw, 7px) solid #8dd5ff;
+    border-radius: 50%;
+}
+
+.avatarProfile,
+.avatarFrameProfile {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+}
+
+.avatarProfile {
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.avatarFrameProfile {
+    z-index: 2;
+    transform: scale(1.15);
+    pointer-events: none;
+}
+
+.profileContent {
+    position: relative;
+    width: 100%;
+    background:
+        linear-gradient(
+            to bottom,
+            #8dd5ff,
+            #f0cafd
+        ) padding-box,
+        linear-gradient(
+            to bottom,
+            #8dd5ff,
+            #f0cafd
+        ) border-box;
+    border-radius: 0 0 6px 6px;
+    height: 100%;
+}
+
+.profileEffect {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    pointer-events: none;
+    z-index: 3;
+}
+@font-face {
+    font-family: "Sakura";
+    src: url("/fonts/Sakura.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+.profileUserName {
+    font-family: "Sakura", "gg sans", Arial, sans-serif;
+}
+
+@keyframes toon-animation {
+    0%, 5% {
+        background-position: 50% 0;
+    }
+
+    55%, 100% {
+        background-position: 50% 100%;
+    }
+}
+
+.profileUserName.toon {
+    --toon-stroke: #000;
+    --toon-main: #43d3ff;
+    --toon-light-1: #9febfc;
+    --toon-light-2: #38a0f5;
+
+    --toon-stroke-width: calc(1.6px + 0.04em);
+    --toon-margin: calc(var(--toon-stroke-width) * -1);
+
+    position: relative;
+
+    paint-order: stroke fill;
+
+    -webkit-text-stroke-width: var(--toon-stroke-width);
+    -webkit-text-stroke-color: var(--toon-stroke);
+
+    color: var(--toon-stroke);
+
+    margin-inline: var(--toon-margin);
+    margin-bottom: var(--toon-margin);
+
+    padding-bottom: var(--toon-stroke-width);
+    padding-inline: var(--toon-stroke-width);
+}
+
+.profileUserName.toon::before {
+    content: attr(data-username);
+
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        180deg,
+        white 0%,
+        var(--toon-light-2) 8%,
+        var(--toon-light-1) 15%,
+        var(--toon-main) 25%,
+        var(--toon-light-2) 45%,
+        var(--toon-main) 55%,
+        white 75%,
+        var(--toon-light-2) 83%,
+        var(--toon-light-1) 90%,
+        var(--toon-main) 100%
+    );
+
+    background-size: 100% 400%;
+    background-position: 50% 0;
+
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 0;
+
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.profileUserName.toon::before {
+    animation: toon-animation 4s cubic-bezier(.44, .29, .48, 1) infinite;
+}
+.profileContent h1{
+
+    margin-left: 20px;
+}
+.profileUser{
+    margin-top: 20px;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+.pronouns
+{
+    margin: 0;
+    color: rgb(76, 71, 71);
+    display: flex;
+    gap: 10px;
+    font-size: 80%;
+    align-items: center;
+}
+.profileInfo
+{
+    display: flex;
+    align-items: center;
+}
+.tag
+{
+    padding: 2px;
+    color: black;
+    border: var(--border);
+    border-radius: 7px;
+    background-color: transparent;
+    align-items: center;
+    display: flex;
+    gap: 5px;
+}
+.thinkingBubble {
+    font-family: "Exo 2", sans-serif;
+
+    position: absolute;
+
+    width: 150%;
+
+    right: -190%;
+    bottom: -10%;
+    padding: 8px 13px;
+
+    background: white;
+    color: #1e1f22;
+
+    border-radius: 14px;
+
+    font-size: 14px;
+    white-space: normal;
+    overflow-wrap: break-word;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, .18);
+
+    z-index: 1;
+}
+
+.thinkingBubble::before {
+    content: "";
+
+    position: absolute;
+
+    width: 15px;
+    height: 15px;
+
+    border-radius: 50%;
+    background: rgb(255, 255, 255);
+
+    left: 10px;
+    top: -8px;
+
+    box-shadow:
+        -13px -13px 0 -2px white
+}
+.activityInfo
+{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.activityIcon
+{
+    margin: 10px 0px 10px 10px;
+    width: 60px;
+    height: 60px;
+    padding: 5px;
+    border-radius: 20px;
+    background-color: #7c93bc;
+}
+.activity
+{
+    padding: 5px;
+    border: 1px rgb(74, 73, 73) solid;
+    background-color: #c9d7f4;
+}
+.activitiesContainer {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: absolute;
+    top: 110%;
+    left: 0%;
+    min-width: 180px;
+    padding: 5px 20px;
+    border: 6px dashed rgba(141, 140, 140, 0.655);
+    border-radius: 18px;
+    background-color: var(--bg1);
+    z-index: 9999; 
+}
+.albumArt
+{
+    padding: 5px;
+    margin: 10px 10px;
+    width: 60px;
+    height: 60px;
+    border-radius: 20px;
+}
+.infoSong
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 70%;
+    color: black;
+}
+.spotify
+{
+    display: flex;
+}
+.song
+{
+    font-weight: bold;
+}
+.artist
+{
+    font-size: 90%;
+}
+.progress-bar {
+    min-width: 250px;
+    height: 5px;
+    background: #555;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: #1DB954;
+    transition: width 1s linear;
+}
+.songTime{
+    display: flex;
+    justify-content: space-between;
+    font-size: 70%;
+}
+.activity
+{
+    margin: 5px;
+    border-radius: 10px;
+}

@@ -1,0 +1,343 @@
+.musicContainer
+{
+    width: 300px;
+    position: fixed;
+    left: 10px;
+    bottom: 10px;
+    padding: 10px;
+    font-family: "Exo 2", sans-serif;
+    background-color: var(--bg1);
+    border-radius: 10px;
+    border: var(--border);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 8px 30px var(--shadow);
+    transition:
+        width 0.2s ease,
+        height 0.2s ease,
+        border-radius 0.2s ease;
+    isolation: isolate;
+    z-index: 999;
+}
+.musicContainer::before {
+    content: "";
+    position: absolute;
+    inset: -4px;
+
+    z-index: -1;
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            45deg,
+            var(--primary),
+            var(--primary-soft),
+            var(--primary),
+            var(--primary-soft),
+            var(--primary),
+            var(--primary-soft)
+        );
+
+    background-size: 400% 400%;
+
+    filter: blur(18px);
+    opacity: 0;
+
+    animation: auraColor 6s linear infinite;
+
+    transition: opacity 0.3s ease;
+}
+
+.musicContainer.playing::before {
+    opacity: 0.65;
+}
+
+@keyframes auraColor {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+.musicDuration
+{
+    font-size: 90%;
+    margin-bottom: 5px;
+}
+.musicPB{
+    width: 100%;
+    height: 4px;
+    background: var(--bg2);
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+.musicPB::-webkit-slider-thumb {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 0;
+    height: 0;
+    border: none;
+}
+.musicIcon
+{
+    padding: 7px;
+}
+.musicContainer button
+{
+    color: var(--text1);
+    font-weight: bold;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 0px;
+    border-radius: 50%;
+    background-color: var(--bg2);
+    border: var(--border);
+    cursor: pointer;
+}
+.musicControl
+{
+    display: flex;
+    gap: 25px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+.mainControl
+{
+    display: flex;
+    gap: 15px;
+}
+.musicHeader
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.musicExtension
+{
+    justify-content: center;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 10px;
+}
+.musicContainer .disc
+{
+    width: 45px;
+    height: 45px;
+    cursor: default;
+}
+.musicInfo
+{
+    max-width: 70%;
+    font-size: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+.songName{
+    font-weight: bold;
+}
+.musicLogo
+{
+    width: 100%;
+    display: flex;
+}
+.disc.playing {
+    animation: rotateDisc 3s linear infinite;
+}
+
+@keyframes rotateDisc {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+.musicContainer .miniDisc {
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 50%;
+    background: transparent;
+    cursor: pointer;
+    
+}
+
+.miniDisc .musicIcon {
+    width: 40px;
+    height: 40px;
+}
+.miniDisc.playing {
+    animation: rotateDisc 3s linear infinite;
+}
+.musicContainer.minimize
+{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    border-radius: 50%;
+
+    z-index: 999;
+}
+
+@keyframes rotateDisc {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+.musicContent
+{
+    width: 100%;
+    transition: opacity 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.playList {
+    font-size: 90%;
+    width: 280px;
+    max-height: 300px;
+    overflow-y: auto;
+
+    padding: 10px;
+
+    background: var(--bg0);
+    border-radius: 12px;
+}
+
+.playListItem {
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 8px;
+    animation: playlistOpen 0.25s ease-out;
+}
+@keyframes playlistOpen {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.playListItem:hover {
+    background: var(--musicHover);
+    color: var(--text-hover);
+}
+
+.playListItem p {
+    margin: 0;
+}
+
+.playListItem span {
+    font-size: 12px;
+    opacity: 0.6;
+}
+.activeSong
+{
+    background-color: var(--musicActive)
+}
+.playListItem.activeSong,
+.playListItem.activeSong p,
+.playListItem.activeSong span {
+    color: var(--text-hover);
+}
+.playListItem:hover,
+.playListItem:hover p,
+.playListItem:hover span {
+    color: var(--text-hover);
+}
+.playList::-webkit-scrollbar {
+    width: 6px;
+}
+
+.playList::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: var(--primary-soft);
+}
+
+.playList::-webkit-scrollbar-track {
+    background: transparent;
+}
+.volumeControl {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.volumeSlider {
+    appearance: none;
+    -webkit-appearance: none;
+
+    width: 70px;
+    height: 4px;
+
+    border-radius: 10px;
+    background: var(--active);
+
+    cursor: pointer;
+}
+
+.volumeSlider::-webkit-slider-thumb {
+    appearance: none;
+    -webkit-appearance: none;
+
+    width: 12px;
+    height: 12px;
+
+    border-radius: 50%;
+    border: none;
+
+    background: var(--text1);
+
+    cursor: pointer;
+}
+.shuffleButton {
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.musicContainer .shuffleButton.activeShuffle {
+    background-color: var(--active);
+    color: var(--text-hover);
+    transform: scale(1.1);
+}
+.musicInfo p{
+    color: var(--text0);
+}
+.musicDuration
+{
+    color: var(--text0);
+}
+.playList p{
+    color: var(--text0);
+}

@@ -1,0 +1,96 @@
+header
+{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.headerContainer
+{
+    width: 80%;
+    font-size: 90%;
+    background-color: var(--bg0);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 4px var(--shadow);
+    border: var(--border);
+}
+.contactContainer
+{
+    justify-content: right;
+    user-select: none;
+    display: flex;
+}
+.icon
+{
+    width: 20px;
+    padding: 8px;
+    margin: 0px 7px;
+    background-color: var(--bg2);
+    border: var(--border);
+    border-radius: 50%;
+    box-shadow: 0 2px 8px var(--shadow);
+    transition: transform 0.2s ease;
+}
+.icon:hover{
+    transform: scale(1.1);
+}
+a {
+    text-decoration: none;
+}
+@media (max-width: 768px) {
+    h1
+    {
+        font-size: 150%;
+    }
+    .contactContainer
+    {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .headerContainer
+    {
+        width: 90%;
+    }
+}
+.clickable {
+    position: relative;
+    display: inline-block;
+    font-family: "Exo 2", sans-serif;
+    font-weight: bold;
+}
+
+.tooltip {
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+
+    margin-top: 8px;
+    padding: 5px 9px;
+
+    background: var(--text0);
+    color: var(--bg0);
+    border-radius: 6px;
+    font-size: 12px;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s ease;
+    white-space: nowrap;
+}
+
+.tooltip::before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid var(--text0);
+}
+
+.clickable:hover .tooltip {
+    opacity: 1;
+}

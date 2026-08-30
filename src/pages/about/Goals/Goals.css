@@ -1,0 +1,128 @@
+.goalsHeader
+{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-bottom: 28px;
+    color: var(--text0);
+}
+.goalsEyebrow
+{
+    color: var(--primary);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+.goalsTitle
+{
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    font-weight: 800;
+    line-height: 1.08;
+}
+.goalsTitle em
+{
+    color: var(--rating-high);
+    font-style: normal;
+}
+.goal
+{
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 86px;
+    margin-bottom: 13px;
+    padding: 14px 18px 14px 14px;
+    overflow: hidden;
+    border: var(--border);
+    border-radius: 12px;
+    background: linear-gradient(105deg, var(--bg2), color-mix(in srgb, var(--bg1) 78%, transparent));
+    box-shadow: 0 8px 20px var(--shadow);
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.goal::before
+{
+    position: absolute;
+    width: 4px;
+    height: 100%;
+    inset: 0 auto 0 0;
+    background: var(--primary);
+    content: "";
+    opacity: 0.75;
+}
+.goal:hover
+{
+    border-color: var(--primary-soft);
+    box-shadow: 0 12px 26px var(--shadow);
+    transform: translateX(5px);
+}
+.goalInfo
+{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-left: 18px;
+    padding-right: 30px;
+}
+.goalIndex
+{
+    display: grid;
+    flex: 0 0 42px;
+    width: 42px;
+    height: 42px;
+    place-items: center;
+    border-radius: 9px;
+    background-color: var(--bg0);
+    color: var(--primary);
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+}
+.goalName
+{
+    color: var(--text0);
+    font-size: 1.08rem;
+    font-weight: 700;
+}
+.goalDescribe
+{
+    color: var(--text2);
+    font-size: 0.92rem;
+    line-height: 1.45;
+}
+.goalArrow
+{
+    margin-left: auto;
+    color: var(--text2);
+    font-size: 1.3rem;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+.goal:hover .goalArrow
+{
+    color: var(--primary);
+    transform: translate(2px, -2px);
+}
+
+@media (max-width: 560px)
+{
+    .goal
+    {
+        align-items: flex-start;
+        padding: 13px 14px 13px 12px;
+    }
+
+    .goalInfo
+    {
+        margin-left: 13px;
+    }
+
+    .goalName
+    {
+        font-size: 1rem;
+    }
+
+    .goalArrow
+    {
+        display: none;
+    }
+}

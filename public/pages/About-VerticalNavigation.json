@@ -1,0 +1,18 @@
+[
+    {
+        "name": "Intro",
+        "id": "intro"
+    },
+    {
+        "name": "Education",
+        "id": "education"
+    },
+    {
+        "name": "Hobbies",
+        "id": "hobbies"
+    },
+    {
+        "name": "Goals",
+        "id": "goals"
+    }
+]

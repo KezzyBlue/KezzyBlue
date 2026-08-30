@@ -1,0 +1,65 @@
+.layoutContainer
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.backgroundVideo {
+    position: fixed;
+    inset: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    object-fit: cover;
+    object-position: center;
+
+    z-index: -2;
+    pointer-events: none;
+}
+
+.backgroundOverlay {
+    position: fixed;
+    inset: 0;
+
+    background: var(--video-overlay);
+
+    z-index: -1;
+    pointer-events: none;
+}
+.layoutContainer::before {
+    content: "";
+
+    position: fixed;
+    inset: 0;
+
+    
+
+    z-index: -1;
+    pointer-events: none;
+}
+.uiToggle
+{
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    background-color: var(--bg0);
+    display: flex;
+    width: 50px;
+    height: 50px;
+    color: var(--text0);
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+
+    user-select: none;
+    z-index: 999;
+    border-radius: 10px;
+    border: var(--border);
+    box-shadow:
+        0 1px 2px var(--shadow),
+        0 4px 12px var(--shadow),
+        0 12px 30px var(--shadow);
+}
