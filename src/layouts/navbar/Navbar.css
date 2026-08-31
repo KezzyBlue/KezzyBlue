@@ -123,7 +123,7 @@
 h2{
     color: var(--text0);
 }
-@media (max-width: 768px) {
+@media (max-width: 856px) {
         
     .humburger {
         display: block;

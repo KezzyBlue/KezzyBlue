@@ -7,7 +7,7 @@
     width: 80%;
     border: var(--border);
 }
-@media (max-width: 768px)
+@media (max-width: 856px)
 {
     .container{
         width: 90%;

@@ -1,14 +1,52 @@
-.videoGameContainer
-{
+.videoGameContainer {
     display: flex;
     flex-direction: column;
     width: 100%;
+    box-sizing: border-box;
 }
-.mostGame{
+
+.mostGame {
+    margin-top: 30px;
     display: flex;
     flex-direction: column;
     width: 100%;
+    background-color: rgba(141, 213, 255, 0.15);
+    box-sizing: border-box;
+    padding: 20px 0px;
+    border-radius: 20px;
+    box-sizing: border-box;
 }
+
+.gameIndicator {
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+
+    height: 3px;
+    border-radius: 999px;
+
+    background: var(--primary);
+
+    transition:
+        transform 0.35s cubic-bezier(.4, 0, .2, 1),
+        width 0.35s ease;
+
+    pointer-events: none;
+}
+
+
+.gameActiveIndicator.minecraft {
+    transform: translateX(0);
+}
+
+.gameActiveIndicator.valorant {
+    transform: translateX(110px);
+}
+
+.gameActiveIndicator.mlbb {
+    transform: translateX(220px);
+}
+
 .gameIconTooltip {
     position: relative;
     display: inline-flex;
@@ -62,7 +100,7 @@
     transform: translate(-50%, 0);
 }
 
-.iconVideoGame{
+.iconVideoGame {
     width: 80px;
     height: 80px;
     padding: 12px;
@@ -73,19 +111,21 @@
     background: var(--bg0);
     box-shadow: 0 8px 18px var(--shadow);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
 }
-.gameBar
-{
+
+.iconVideoGame.active {
+    background-color: rgba(78, 163, 243, 0.375);
+}
+
+.gameBar {
+    position: relative;
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
     gap: 30px;
+    width: 100%;
+    padding-left: 20px;
     box-sizing: border-box;
-    width: 99%;
-    padding: 0px 22px;
-    /* box-shadow:
-        0 14px 28px rgba(12, 46, 78, 0.2),
-        inset 0 1px 0 rgba(255, 255, 255, 0.16); */
 }
 
 .gameIconTooltip:hover .iconVideoGame,
@@ -94,7 +134,53 @@
     box-shadow: 0 13px 24px var(--shadow);
 }
 
-@media (max-width: 768px) {
+.gameHeader {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.gameTitle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 250%;
+    margin-bottom: 10px;
+}
+
+.gameIcon {
+    width: 50px;
+    height: 50px;
+}
+
+.gameHeader p {
+    margin: 0;
+    color: var(--text2);
+    line-height: 1.6;
+}
+
+.gameInfo
+{
+    margin: 20px;
+    text-align: center;
+    font-size: 80%;
+}
+
+.gameLine
+{
+    display: flex;
+    margin: 40px auto 0px auto;
+    width: 95%;
+    height: 3px;
+    background-color: var(--text0);
+}
+
+
+@media (max-width: 856px) {
+
+    .gameTitle {
+        font-size: 180%;
+    }
+
     .mostGame h2 {
         gap: 8px !important;
         font-size: 140% !important;
@@ -109,13 +195,12 @@
     .gameBar {
         gap: 12px;
         width: 100%;
-        padding: 14px 12px;
         border-radius: 14px;
     }
 
     .iconVideoGame {
-        width: 35px;
-        height: 35px;
+        width: 50px;
+        height: 50px;
         border-radius: 11px;
     }
 
@@ -126,4 +211,5 @@
     .gameIconTooltip::after {
         font-size: 12px;
     }
+    
 }

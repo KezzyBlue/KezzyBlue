@@ -129,7 +129,7 @@ b
 .closeExtendButton:hover {
     transform: rotate(90deg);
 }
-@media (max-width: 768px) {
+@media (max-width: 856px) {
     .activitiesContainer{
         left: -50%;
         font-style: 90%;

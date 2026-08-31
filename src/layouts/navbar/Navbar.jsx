@@ -28,7 +28,7 @@ function Navbar({ theme, setTheme }) {
 
     useEffect(() => {
         const handleResize = () => {
-            if (window.innerWidth > 768) {
+            if (window.innerWidth > 856) {
                 setOpen(false);
             }
         };

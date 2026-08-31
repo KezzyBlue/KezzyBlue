@@ -37,7 +37,7 @@ header
 a {
     text-decoration: none;
 }
-@media (max-width: 768px) {
+@media (max-width: 856px) {
     h1
     {
         font-size: 150%;
