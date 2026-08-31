@@ -32,9 +32,8 @@ function Astronomy() {
 
             <AboutPageAnimationn delay={0.25}>
                 <div className="astroNote">
-                    <h2 style={{ display: "flex", alignItems: "center", gap: "10px", color: "var(--text2)", fontWeight: "normal" }}>
-                        <NotebookPen />
-                        Some tips and tricks you should know:
+                    <h2 className = "tipTrickHeader">
+                        <NotebookPen className = "tipTrickIcon"/> Some tips and tricks you should know:
                     </h2>
                     <span> <MoonStar className="astroIconBlue" /> Choose a night with little moon — Prefer nights close to the New Moon to shoot the Milky Way and deep-sky. </span>
                     <span> <Lightbulb className="astroIconBlue" /> Avoid light pollution — Go away from the city, prioritize places with Bortle 1–4.</span>

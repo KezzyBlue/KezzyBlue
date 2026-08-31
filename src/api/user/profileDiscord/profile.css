@@ -247,7 +247,7 @@
 {
     padding: 2px;
     color: black;
-    border: var(--border);
+    border: 1px solid rgb(104, 103, 103);
     border-radius: 7px;
     background-color: transparent;
     align-items: center;
@@ -375,8 +375,9 @@
     justify-content: space-between;
     font-size: 70%;
 }
-.activity
+.activity, .activity p
 {
     margin: 5px;
     border-radius: 10px;
+    color: rgb(97, 96, 96);
 }
