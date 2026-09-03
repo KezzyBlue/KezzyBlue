@@ -1,0 +1,260 @@
+.robloxProfile {
+    width: min(100%, 860px);
+    margin: 16px auto;
+    overflow: hidden;
+    border: var(--border);
+    border-radius: 18px;
+    background:
+               radial-gradient(circle at 90% 0%, rgba(54, 145, 255, 0.22), transparent 34%),
+        var(--bg1);
+    box-shadow: 0 12px 30px var(--shadow);
+}
+
+.robloxProfileHeader {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
+    min-height: fit-content;
+    padding: 24px 28px;
+    background: linear-gradient(135deg, rgba(54, 145, 255, 0.16), transparent 62%);
+}
+
+.robloxIdentity {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.robloxAvatarFrame {
+    position: relative;
+    flex: 0 0 auto;
+}
+
+.robloxAvatar {
+    display: block;
+    width: 116px;
+    height: 116px;
+    object-fit: cover;
+    border: 6px solid var(--bg0);
+    border-radius: 50%;
+    background-color: var(--bg0);
+    box-shadow: 0 8px 20px var(--shadow);
+}
+
+.robloxOnlineDot {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    width: 18px;
+    height: 18px;
+    border: 4px solid var(--bg0);
+    border-radius: 50%;
+    background: var(--status-online);
+}
+
+.robloxIdentityText h1,
+.robloxSectionHeading h2,
+.robloxGame h3 {
+    margin: 0;
+    color: var(--text0);
+}
+
+.robloxIdentityText h1 {
+    font-size: 2.8rem;
+    line-height: 1;
+}
+
+.robloxEyebrow,
+.robloxSectionLabel {
+    display: block;
+    color: var(--primary);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.robloxEyebrow {
+    margin-bottom: 10px;
+}
+
+.robloxUsername,
+.robloxJoined span,
+.robloxGame p,
+.robloxAbout p,
+.robloxEmptyState {
+    color: var(--text2);
+}
+
+.robloxUsername {
+    margin: 10px 0 0;
+    font-size: 1.05rem;
+}
+
+.robloxJoined {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px 16px;
+    border-left: 2px solid var(--primary-soft);
+}
+
+.robloxJoined strong {
+    color: var(--text1);
+    font-size: 0.95rem;
+}
+
+.robloxProfileBody {
+    padding: 22px 28px 28px;
+    background-color: var(--bg0);
+}
+
+.robloxAbout {
+    max-width: 680px;
+    padding-bottom: 20px;
+}
+
+.robloxAbout p {
+    margin: 9px 0 0;
+    line-height: 1.55;
+}
+
+.robloxSectionHeading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.robloxSectionHeading h2 {
+    margin-top: 5px;
+    font-size: 1.35rem;
+}
+
+.robloxGameCount {
+    padding: 6px 10px;
+    border: 1px solid var(--primary-soft);
+    border-radius: 999px;
+    color: var(--primary);
+    font-size: 0.75rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.robloxGameGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+}
+
+.robloxGame {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    min-width: 0;
+    padding: 12px;
+    border: var(--border);
+    border-radius: 14px;
+    background-color: var(--bg1);
+    box-shadow: 0 4px 12px var(--shadow);
+}
+
+.robloxGameAvatar {
+    flex: 0 0 auto;
+    width: 62px;
+    height: 62px;
+    object-fit: cover;
+    border-radius: 11px;
+}
+
+.robloxGameAvatarFallback {
+    display: grid;
+    place-items: center;
+    background-color: var(--bg2);
+    color: var(--primary);
+    font-size: 1.4rem;
+    font-weight: 800;
+}
+
+.robloxGameDetails {
+    min-width: 0;
+}
+
+.robloxGame h3 {
+    overflow: hidden;
+    font-size: 0.9rem;
+    line-height: 1.3;
+    text-overflow: ellipsis;
+    white-space: normal;
+}
+
+.robloxGame p {
+    margin: 5px 0 0;
+    font-size: 0.78rem;
+}
+
+.robloxEmptyState {
+    margin: 0;
+    padding: 18px;
+    border: 1px dashed var(--primary-soft);
+    border-radius: 12px;
+    text-align: center;
+}
+
+@media (max-width: 620px) {
+    .robloxProfileHeader,
+    .robloxProfileBody {
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+
+    .robloxProfileHeader {
+        align-items: center;
+        flex-direction: column;
+        min-height: auto;
+        gap: 18px;
+    }
+
+    .robloxIdentity {
+        align-items: center;    
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .robloxAvatar {
+        width: 88px;
+        height: 88px;
+    }
+
+    .robloxIdentityText h1 {
+        font-size: 1.9rem;
+    }
+
+    .robloxOnlineDot {
+        right: 3px;
+        bottom: 3px;
+    }
+
+    .robloxJoined {
+        width: 100%;
+        padding: 12px 0 0;
+        border-top: 2px solid var(--primary-soft);
+        border-left: 0;
+    }
+
+    .robloxSectionHeading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .robloxGameGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .robloxGame {
+        padding: 10px;
+    }
+}

@@ -6,10 +6,14 @@
     min-width: 0;
     box-sizing: border-box;
     border: 1px solid rgba(0, 0, 0, 0.504);
-    background-color: #f0f8ff57;
+    background:
+               radial-gradient(circle at 90% 0%, rgba(54, 145, 255, 0.22), transparent 34%),
+        var(--bg1);
     border-radius: 10px;
 }
-
+.sectionLabel{
+    color: var(--primary);
+}
 .minecraftUserSkin {
     width: fit-content;
     display: flex;
@@ -44,6 +48,7 @@ a:active {
 .skinUrl
 {
     margin-bottom: 30px;
+    font-weight: bold;
 }
 
 .linkSkin
@@ -93,7 +98,9 @@ a:active {
     border-radius: 10px;
     margin-bottom: 10px;
     padding: 5px;
+    color: var(--text1);
     border: var(--border);
+    font-weight: bold;
 }
 
 @media (max-width: 856px)
