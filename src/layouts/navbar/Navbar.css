@@ -29,11 +29,13 @@
 
 .active,
 .nonactive {
-    padding: 5px 20px;
+    width: 130px;
+    height: 35px;
     font-size: 80%;
     margin-right: 17px;
     text-align: center;
     align-items: center;
+    justify-content: center;
     display: flex;
     border-radius: 10px;
     color: var(--text1);

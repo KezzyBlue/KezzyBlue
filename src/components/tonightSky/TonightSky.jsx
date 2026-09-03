@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 import { Clock3, MoonStar, Sparkles, Telescope } from "lucide-react";
-import { calculateAstronomyData } from "../api/astronomy/astronomyData";
+import { calculateAstronomyData } from "../../api/astronomy/astronomyData";
 import './TonightSky.css';
 const TonightSky = () => {
     const sky = useMemo(() => calculateAstronomyData(new Date()), []);

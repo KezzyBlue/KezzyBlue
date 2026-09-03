@@ -1,0 +1,419 @@
+.hanoiTowerLayout {
+    --hanoi-accent: var(--primary);
+    --hanoi-surface: color-mix(in srgb, var(--bg1) 88%, var(--bg0));
+    --hanoi-surface-soft: color-mix(in srgb, var(--bg1) 58%, var(--bg0));
+    --hanoi-line: color-mix(in srgb, var(--primary) 19%, var(--border));
+    box-sizing: border-box;
+    min-height: 500px;
+    padding: 32px clamp(18px, 4vw, 58px) 52px;
+    color: var(--text0);
+    user-select: none;
+}
+
+.hanoiTowerHeader,
+.hanoiTowerVisualizer {
+    width: min(1180px, 100%);
+    margin: 0 auto;
+}
+
+.hanoiTowerHeader {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.hanoiTowerEyebrow,
+.controlLabel,
+.boardTopline > span {
+    color: var(--hanoi-accent);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+}
+
+.hanoiTowerHeader h1 {
+    margin: 8px 0 0;
+    color: var(--text0);
+    font-size: clamp(32px, 5vw, 58px);
+    letter-spacing: -0.04em;
+    line-height: 0.98;
+}
+
+.hanoiTowerHeader p {
+    margin: 12px 0 0;
+    color: var(--text2);
+    font-size: 14px;
+}
+
+.hanoiTowerStatus {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 13px;
+    border: 1px solid var(--hanoi-line);
+    border-radius: 999px;
+    background: var(--hanoi-surface-soft);
+    color: var(--text1);
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.statusDot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--text2);
+}
+
+.statusDot.isPlaying {
+    background: var(--status-online);
+    box-shadow: 0 0 0 4px color-mix(in srgb, var(--status-online) 15%, transparent);
+}
+
+.hanoiTowerVisualizer {
+    display: grid;
+    grid-template-columns: minmax(0, 1.8fr) minmax(260px, 0.8fr);
+    gap: 18px;
+}
+
+.hanoiTowerBoard,
+.hanoiTowerControl {
+    border: 1px solid var(--hanoi-line);
+    border-radius: 18px;
+    background: var(--hanoi-surface);
+    box-shadow: 0 18px 45px var(--shadow);
+}
+
+.hanoiTowerBoard {
+    min-width: 0;
+    min-height: 500px;
+    overflow: hidden;
+    padding: 20px 22px 16px;
+    background-image:
+        linear-gradient(color-mix(in srgb, var(--primary) 6%, transparent) 1px, transparent 1px),
+        linear-gradient(90deg, color-mix(in srgb, var(--primary) 6%, transparent) 1px, transparent 1px),
+        radial-gradient(circle at 50% 35%, color-mix(in srgb, var(--primary-soft) 28%, transparent), transparent 62%);
+    background-size: 34px 34px, 34px 34px, auto;
+}
+
+.boardTopline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--hanoi-line);
+}
+
+.boardTopline strong {
+    color: var(--text1);
+    font-size: 12px;
+}
+
+.boardTopline small {
+    color: var(--text2);
+    font-weight: 500;
+}
+
+.towerGrid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: end;
+    gap: 10px;
+    min-height: 410px;
+    padding-top: 24px;
+}
+
+.tower {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+}
+
+.towerLabel {
+    color: var(--text2);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+}
+
+.towerStack {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    height: 355px;
+    padding-bottom: 15px;
+}
+
+.pole {
+    position: absolute;
+    bottom: 15px;
+    width: 8px;
+    height: 82%;
+    border-radius: 8px 8px 2px 2px;
+    background: linear-gradient(90deg, var(--text2), var(--text0), var(--text2));
+    opacity: 0.72;
+}
+
+.base {
+    position: absolute;
+    bottom: 0;
+    width: 94%;
+    height: 13px;
+    border-radius: 8px;
+    background: var(--text1);
+    box-shadow: 0 6px 16px var(--shadow);
+}
+
+.disks {
+    position: absolute;
+    bottom: 13px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    width: 100%;
+    z-index: 1;
+}
+
+.disk {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--disk-size);
+    height: 29px;
+    border: 2px solid color-mix(in srgb, var(--primary) 62%, var(--text0));
+    border-radius: 8px;
+    background: linear-gradient(135deg, var(--primary), color-mix(in srgb, var(--primary) 65%, var(--primary-soft)));
+    box-shadow: 0 5px 10px color-mix(in srgb, var(--primary) 20%, transparent);
+    color: var(--text-hover);
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.disk span {
+    opacity: 0.82;
+}
+
+.hanoiTowerControl {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    min-width: 0;
+    padding: 24px;
+}
+
+.controlSection {
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--hanoi-line);
+}
+
+.setDisk {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    margin-top: 14px;
+}
+
+.totalDisk {
+    color: var(--text0);
+    font-size: 46px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.iconButton,
+.controlButton,
+.mainControlButton {
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--hanoi-line);
+    cursor: pointer;
+    transition: transform 0.18s ease, background-color 0.18s ease, border-color 0.18s ease;
+}
+
+.iconButton,
+.controlButton {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background: var(--hanoi-surface-soft);
+    color: var(--text1);
+}
+
+.iconButton:hover,
+.controlButton:hover {
+    border-color: var(--hanoi-accent);
+    background: color-mix(in srgb, var(--primary-soft) 20%, var(--bg1));
+}
+
+button:active {
+    transform: scale(0.94);
+}
+
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.35;
+}
+
+.hanoiTowerProcess {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.calcStep {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 12px;
+    border: 1px solid var(--hanoi-line);
+    border-radius: 11px;
+    background: var(--hanoi-surface-soft);
+}
+
+.calcStep span {
+    color: var(--text2);
+    font-size: 10px;
+}
+
+.calcStep strong {
+    color: var(--text1);
+    font-size: 16px;
+}
+
+.currentMove {
+    min-height: 86px;
+}
+
+.moveRoute {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-top: 13px;
+}
+
+.moveRoute strong {
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--hanoi-line);
+    border-radius: 10px;
+    background: var(--hanoi-surface-soft);
+    color: var(--hanoi-accent);
+    font-size: 16px;
+}
+
+.moveRoute span {
+    color: var(--text2);
+}
+
+.currentMove p {
+    margin: 13px 0 0;
+    color: var(--text2);
+    font-size: 12px;
+}
+
+.hanoiTowerButtonContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.mainControlButton {
+    width: 48px;
+    height: 48px;
+    border-color: var(--hanoi-accent);
+    border-radius: 50%;
+    background: var(--hanoi-accent);
+    color: var(--text-hover);
+    box-shadow: 0 8px 20px color-mix(in srgb, var(--primary) 28%, transparent);
+}
+
+.speedControl {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 12px;
+    margin-top: auto;
+    color: var(--text2);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+}
+
+.speedControl input {
+    width: 100%;
+    accent-color: var(--hanoi-accent);
+}
+
+.speedControl strong {
+    color: var(--text1);
+    font-size: 11px;
+    letter-spacing: 0;
+}
+
+@media (max-width: 820px) {
+    .hanoiTowerVisualizer {
+        grid-template-columns: 1fr;
+    }
+
+    .hanoiTowerControl {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+
+    .controlSection {
+        padding-bottom: 0;
+        border-bottom: 0;
+    }
+
+    .currentMove,
+    .hanoiTowerButtonContainer,
+    .speedControl {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 520px) {
+    .hanoiTowerLayout {
+        padding: 24px 12px 36px;
+    }
+
+    .hanoiTowerHeader {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .hanoiTowerBoard {
+        min-height: 390px;
+        padding: 16px 10px 12px;
+    }
+
+    .towerGrid {
+        min-height: 320px;
+        padding-top: 16px;
+    }
+
+    .towerStack {
+        height: 275px;
+    }
+
+    .disk {
+        height: 23px;
+        font-size: 9px;
+    }
+
+    .hanoiTowerControl {
+        display: flex;
+        padding: 20px;
+    }
+}

@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Camera, Telescope, NotebookPen, MoonStar, Lightbulb, Cloudy, Clock, Construction } from "lucide-react";
 import './Astronomy.css';
 import AboutPageAnimationn from '../../../../config/animation/AboutPageAnimation.jsx';
-import TonightSky from "../../../../components/TonightSky";
-import WeatherCard from "../../../../components/WeatherCard";
+import TonightSky from "../../../../components/tonightSky/TonightSky.jsx";
+import WeatherCard from "../../../../components/weatherCard/WeatherCard.jsx";
 function Astronomy() {
     return (
         <div className="">

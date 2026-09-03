@@ -12,6 +12,8 @@ import Programming from "../pages/about/Hobbies/programming/Programming.jsx";
 import Movie from "../pages/about/Hobbies/movie/Movie.jsx";
 import { Navigate } from "react-router-dom";
 import HobbiesMain from "../pages/about/Hobbies/hobbiesMain/HobbiesMain.jsx";
+import Visualizer from "../pages/visualizer/Visualizer.jsx";
+import { title } from "framer-motion/client";
 export const routes = [
     {
         path: "/",
@@ -89,5 +91,11 @@ export const routes = [
                 title: "Goals"
             }
         ]
+    },
+    {
+        path: "/visualizer",
+        title: "Visualizer 🔗",
+        element: <Visualizer/>,
+        showInNavbar: true
     }
 ];

@@ -38,7 +38,6 @@ function Roblox()
                             alt={`${data.displayName || data.name} avatar`}
                             className="robloxAvatar"
                         />
-                        <span className="robloxOnlineDot" aria-label="Roblox profile loaded" />
                     </div>
                     <div className="robloxIdentityText">    
                         <h1>{data.displayName || data.name || 'Unknown player'}</h1>
