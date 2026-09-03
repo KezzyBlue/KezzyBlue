@@ -23,7 +23,7 @@ function Music() {
     const [shuffle, setShuffle] = useState(false);
 
     const fetchMusic = async () => {
-        const data = await axios.get('music/music.json');
+        const data = await axios.get('/music/music.json');
         setSongs(data.data);
         setOriginalSongs(data.data);
         setSong(data.data[0]);

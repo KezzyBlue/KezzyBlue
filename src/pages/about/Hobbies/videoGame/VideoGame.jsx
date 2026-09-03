@@ -5,6 +5,7 @@ import './VideoGame.css';
 import { useState, useRef, useEffect } from "react";
 import Minecraft from "./minecraft/Minecraft.jsx";
 import Valorant from "./valorant/Valorant.jsx";
+import Roblox from "./roblox/roblox.jsx";
 
 function VideoGame() {
     const [select, setSelect] = useState("Minecraft");
@@ -13,7 +14,7 @@ function VideoGame() {
     const gameRefs = {
         Minecraft: useRef(null),
         Valorant: useRef(null),
-        MLBB: useRef(null),
+        Roblox: useRef(null),
     };
 
     const [indicatorStyle, setIndicatorStyle] = useState({});
@@ -39,6 +40,7 @@ function VideoGame() {
     {
         if(select == "Minecraft") return (<Minecraft/>);   
         if(select == "Valorant") return (<Valorant/>);
+        if(select == "Roblox") return (<Roblox/>);
     }
 
     return (
@@ -101,18 +103,18 @@ function VideoGame() {
                         </span>
 
                         <span
-                            ref={gameRefs.MLBB}
+                            ref={gameRefs.Roblox}
                             className="gameIconTooltip"
-                            data-tooltip="Mobile Legends: Bang Bang"
+                            data-tooltip="Roblox"
                             role="img"
-                            aria-label="Mobile Legends: Bang Bang"
+                            aria-label="Roblox"
                             tabIndex="0"
-                            onClick={() => setSelect("MLBB")}
+                            onClick={() => setSelect("Roblox")}
                         >
                             <img
-                                src="/icon/mlbb.png"
+                                src="/icon/roblox.png"
                                 className="iconVideoGame"
-                                alt="Mobile Legends: Bang Bang"
+                                alt="Roblox"
                             />
                         </span>
 
