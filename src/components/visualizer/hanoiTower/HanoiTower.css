@@ -144,7 +144,7 @@
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
     width: 100%;
     height: 355px;
     padding-bottom: 15px;

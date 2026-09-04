@@ -3,7 +3,7 @@ import './Dijkstra.css';
 function Dijkstra()
 {
     return (
-        <div>
+        <div className = "dijkstra">
             
         </div>
     );

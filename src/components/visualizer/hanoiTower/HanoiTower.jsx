@@ -70,10 +70,6 @@ function HanoiTower() {
     return (
         <div className="hanoiTowerLayout">
             <header className="hanoiTowerHeader">
-                <div>
-                    <h1>Tower of Hanoi</h1>
-                    <p>Watch each step of this classic recursive puzzle.</p>
-                </div>
                 <div className="hanoiTowerStatus">
                     <span className={`statusDot ${playing ? 'isPlaying' : ''}`} />
                     {playing ? 'Running' : step >= totalSteps ? 'Completed' : 'Paused'}
