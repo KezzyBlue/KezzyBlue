@@ -196,3 +196,51 @@
         padding: 24px 16px;
     }
 }
+
+@media (max-width: 600px) {
+    .hobbySubpageHeading {
+        width: fit-content;
+        max-width: 100%;
+        flex: 0 1 auto;
+        gap: 8px;
+    }
+
+    .hobbySubpageHeading > div {
+        overflow: hidden;
+    }
+
+    .hobbySubpageIcon {
+        flex-basis: 46px;
+        width: 46px;
+        height: 46px;
+        border-radius: 12px;
+    }
+
+    .hobbySubpageIcon svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .hobbySubpageKicker {
+        overflow: hidden;
+        margin-bottom: 4px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .hobbySubpageTitle {
+        overflow: hidden;
+        font-size: clamp(1.65rem, 8vw, 2.2rem);
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .hobbySubpageDescription {
+        width: fit-content;
+        max-width: min(100%, 30ch);
+        flex: 0 1 auto;
+        font-size: .88rem;
+        line-height: 1.45;
+        text-align: left;
+    }
+}
