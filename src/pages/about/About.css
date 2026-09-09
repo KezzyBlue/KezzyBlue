@@ -1,7 +1,7 @@
 .aboutContainer
 {
     display: grid;
-    grid-template-columns: 20% 1fr;
+    grid-template-columns: 20% minmax(0, 1fr);
     grid-template-rows: auto;
     gap: 20px 20px;
     font-family: "Exo 2", sans-serif;
@@ -117,6 +117,8 @@ p
     border-radius: 20px;
     border: var(--border);
     padding: 20px;
+    min-width: 0;
+    box-sizing: border-box;
 }
 .flex{
     display: flex;

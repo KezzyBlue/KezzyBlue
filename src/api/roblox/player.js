@@ -8,7 +8,5 @@ export async function fetchPlayer(userId) {
         throw new Error(data?.error || 'Failed to fetch Roblox player');
     }
 
-    console.log(data);
-
     return data;
 }

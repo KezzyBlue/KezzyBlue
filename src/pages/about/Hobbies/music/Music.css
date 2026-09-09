@@ -1,0 +1,63 @@
+.hobby-musicPage { width: 100%; min-width: 0; }
+.hobby-musiccontainer { width: 100%; max-width: 1040px; margin: 34px auto 72px; box-sizing: border-box; }
+.hobby-musicHeader { display: flex; align-items: end; justify-content: space-between; gap: 24px; margin: 20px 0 28px; }
+.hobby-musicTitle { display: flex; align-items: center; gap: 15px; }
+.hobby-musicIcon { display: grid; place-items: center; width: 56px; height: 56px; border-radius: 16px; background: var(--text0); color: var(--bg0); }
+.hobby-musicIcon svg { width: 30px; height: 30px; }
+.hobby-musicTitle h1 { margin: 0; color: var(--text0); font-size: clamp(2.2rem, 5vw, 4.1rem); line-height: .95; letter-spacing: -2px; }
+.music-eyebrow, .music-kicker { margin: 0 0 7px; color: var(--primary); font-size: .72rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
+.music-intro { margin: 0 0 7px; color: var(--text2); font-size: 1rem; }
+.music-status { display: flex; align-items: center; justify-content: center; gap: 10px; min-height: 180px; border: var(--border); border-radius: 18px; color: var(--text2); background: var(--bg1); }
+.music-statusError { padding: 20px; text-align: center; color: var(--rating-high); }
+.music-spinner { animation: music-spin 1s linear infinite; color: var(--primary); }
+.music-featured { position: relative; display: flex; align-items: center; gap: 28px; min-height: 270px; overflow: hidden; margin-bottom: 46px; padding: 28px; border-radius: 22px; background: linear-gradient(120deg, var(--text0), var(--musicActive)); color: var(--bg0); box-shadow: 0 18px 38px var(--shadow); }
+.music-featured > img, .music-featured > .music-artworkFallback { z-index: 1; width: 215px; height: 215px; flex: 0 0 215px; border-radius: 12px; object-fit: cover; box-shadow: 0 12px 28px rgba(0,0,0,.28); }
+.music-featuredContent { position: relative; z-index: 1; min-width: 0; }
+.music-featured h2 { max-width: 560px; margin: 0 0 7px; font-size: clamp(1.8rem, 4vw, 3.4rem); line-height: 1.02; letter-spacing: -1px; }
+.music-featuredArtist { margin: 0 0 26px; color: rgba(255,255,255,.73); }
+.music-featured a { color: inherit; text-decoration: none; }
+.music-listenButton { display: inline-flex; align-items: center; gap: 8px; padding: 11px 15px; border: 1px solid rgba(255,255,255,.35); border-radius: 99px; font-size: .88rem; font-weight: 700; }
+.music-listenButton:hover { background: rgba(255,255,255,.14); }
+.music-record { position: absolute; right: 5%; opacity: .1; transform: rotate(17deg); }
+.music-section { margin-top: 42px; }
+.music-sectionHeading { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
+.music-sectionHeading h2 { display: flex; align-items: center; gap: 9px; margin: 0; color: var(--text0); font-size: 1.2rem; }
+.music-sectionHeading h2 svg { color: var(--primary); }
+.music-sectionHeading > span { display: grid; place-items: center; min-width: 25px; height: 25px; border-radius: 50%; background: var(--bg2); color: var(--text2); font-size: .75rem; }
+.music-trackList { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 28px; }
+.music-trackList > a, .music-cardGrid > a, .music-playlistGrid > a { color: inherit; text-decoration: none; }
+.music-trackItem { display: flex; align-items: center; gap: 12px; min-width: 0; padding: 10px; border-bottom: 1px solid var(--bg2); color: var(--text2); }
+.music-trackItem:hover { border-radius: 8px; background: var(--bg1); color: var(--text0); }
+.music-trackItem img, .music-trackItem .music-artworkFallback { width: 48px; height: 48px; flex: 0 0 48px; border-radius: 5px; object-fit: cover; }
+.music-trackItem > svg { margin-left: auto; opacity: 0; }
+.music-trackItem:hover > svg { opacity: 1; }
+.music-trackNumber { width: 21px; color: var(--text2); font-size: .76rem; }
+.music-itemText, .music-card, .music-playlist span { display: flex; flex-direction: column; min-width: 0; gap: 4px; }
+.music-itemText strong, .music-card strong, .music-playlist strong { overflow: hidden; color: var(--text0); font-size: .94rem; font-weight: 650; text-overflow: ellipsis; white-space: nowrap; }
+.music-itemText small, .music-card small, .music-playlist small { overflow: hidden; color: var(--text2); font-size: .78rem; text-overflow: ellipsis; white-space: nowrap; }
+.music-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 42px; }
+.music-cardGrid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+.music-card { gap: 9px; overflow: hidden; }
+.music-card:hover strong { color: var(--primary); }
+.music-card img, .music-card .music-artworkFallback { width: 100%; aspect-ratio: 1; border-radius: 8px; object-fit: cover; }
+.music-artistCard img, .music-artistCard .music-artworkFallback { border-radius: 50%; }
+.music-artworkFallback { display: grid; place-items: center; background: linear-gradient(145deg, var(--bg2), var(--primary-soft)); color: var(--text1); }
+.music-playlistGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.music-playlist { display: flex; align-items: center; gap: 14px; padding: 12px; border: var(--border); border-radius: 10px; background: var(--bg1); }
+.music-playlist:hover { border-color: var(--primary); transform: translateY(-2px); }
+.music-playlist img, .music-playlist .music-artworkFallback { width: 64px; height: 64px; flex: 0 0 64px; border-radius: 6px; object-fit: cover; }
+.music-playlist > svg { margin-left: auto; color: var(--primary); }
+@keyframes music-spin { to { transform: rotate(360deg); } }
+@media (max-width: 720px) {
+    .hobby-musiccontainer { margin-top: 24px; }
+    .hobby-musicHeader { align-items: start; flex-direction: column; gap: 14px; }
+    .music-featured { align-items: start; flex-direction: column; padding: 20px; }
+    .music-featured > img, .music-featured > .music-artworkFallback { width: min(100%, 190px); height: auto; aspect-ratio: 1; flex-basis: auto; }
+    .music-record { right: -45px; bottom: -30px; }
+    .music-trackList, .music-columns { grid-template-columns: 1fr; }
+    .music-cardGrid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+@media (max-width: 440px) {
+    .music-cardGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .music-playlistGrid { grid-template-columns: 1fr; }
+}

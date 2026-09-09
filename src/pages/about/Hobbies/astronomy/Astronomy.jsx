@@ -6,7 +6,7 @@ import TonightSky from "../../../../components/tonightSky/TonightSky.jsx";
 import WeatherCard from "../../../../components/weatherCard/WeatherCard.jsx";
 function Astronomy() {
     return (
-        <div className="">
+        <div className="hobbySubpage">
             <AboutPageAnimationn delay={0.01}>
                 <Link to=".." className="comebackButton">
                     <ArrowLeft aria-hidden="true" size={18} />
@@ -14,16 +14,19 @@ function Astronomy() {
                 </Link>
             </AboutPageAnimationn>
             <AboutPageAnimationn delay={0.08}>
-                <div className="astroHeader">
-                    <h1 className="astroTitle">
-                        <Telescope className="astroIcon" />
-                        Astronomy
-                    </h1>
-                    <p>I just simply have an interest in the vast universe.</p>
-                </div>
+                <header className="hobbySubpageHeader">
+                    <div className="hobbySubpageHeading">
+                        <span className="hobbySubpageIcon"><Telescope aria-hidden="true" /></span>
+                        <div>
+                            <p className="hobbySubpageKicker">Look up, wonder more</p>
+                            <h1 className="hobbySubpageTitle">Astronomy</h1>
+                        </div>
+                    </div>
+                    <p className="hobbySubpageDescription">I simply have an interest in the vast universe.</p>
+                </header>
+                <div className="hobbySubpageRule" />
             </AboutPageAnimationn>
             <AboutPageAnimationn delay={0.15}>
-                <div className="hor-line" style={{ margin: "30px 0px" }} />
                 <div className="skyInfo">
                     <WeatherCard />
                     <TonightSky />

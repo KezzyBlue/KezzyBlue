@@ -178,7 +178,8 @@
 
     .astroGallery {
         gap: 10px;
-        width: 120%;
+        width: 100%;
+        max-width: 100%;
     }
 
     .astroIconBlue{

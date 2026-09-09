@@ -52,15 +52,18 @@ function VideoGame() {
                 </Link>
             </AboutPageAnimation>
             <AboutPageAnimation>
-                <div className="gameHeader">
-                    <h1 className="gameTitle">
-                        <Gamepad className="gameIcon" />
-                        Video game
-                    </h1>
-                    <p> Anyway, I'm still a kid and I like playing video games </p>
-                </div>
+                <header className="hobbySubpageHeader">
+                    <div className="hobbySubpageHeading">
+                        <span className="hobbySubpageIcon"><Gamepad aria-hidden="true" /></span>
+                        <div>
+                            <p className="hobbySubpageKicker">Play, compete, repeat</p>
+                            <h1 className="hobbySubpageTitle">Video game</h1>
+                        </div>
+                    </div>
+                    <p className="hobbySubpageDescription">Anyway, I'm still a kid and I like playing video games.</p>
+                </header>
 
-                <div className="hor-line"></div>
+                <div className="hobbySubpageRule"></div>
 
                 <div className="mostGame">
                     <div className="gameBar" ref={gameBarRef}>
