@@ -154,7 +154,15 @@ function Music() {
                             <MusicSection icon={<Users size={19} />} title="Favourite artists" count={catalog.artists.length}>
                                 <div className="music-cardGrid music-artistGrid">
                                     {catalog.artists.map((artist) => <SpotifyLink key={artist.id} href={artist.external_urls?.spotify}>
-                                        <article className="music-card music-artistCard"><Artwork src={imageOf(artist)} alt={artist.name} fallback={<Users size={25} />} /><strong>{artist.name}</strong><small>{artist.genres?.[0] || 'Artist'}</small></article>
+                                        <article className="music-card music-artistCard">
+                                            <Artwork src={imageOf(artist)} alt={artist.name} fallback={<Users size={25} />} />
+                                            <strong>
+                                                {artist.name}
+                                            </strong>
+                                            <small>
+                                                {artist.genres?.[0] || 'Artist'}
+                                            </small>
+                                        </article>
                                     </SpotifyLink>)}
                                 </div>
                             </MusicSection>
