@@ -13,7 +13,8 @@ import Movie from "../pages/about/Hobbies/movie/Movie.jsx";
 import { Navigate } from "react-router-dom";
 import HobbiesMain from "../pages/about/Hobbies/hobbiesMain/HobbiesMain.jsx";
 import Visualizer from "../pages/visualizer/Visualizer.jsx";
-import { title } from "framer-motion/client";
+import Blog from "../pages/blog/Blog.jsx";
+import BlogDetail from "../pages/blog/BlogDetail.jsx";
 export const routes = [
     {
         path: "/",
@@ -97,5 +98,18 @@ export const routes = [
         title: "Visualizer 🔗",
         element: <Visualizer/>,
         showInNavbar: true
+    }
+    ,
+    {
+        path: "/blog",
+        title: "Blog 📔",
+        element: <Blog/>,
+        showInNavbar: true,
+        children: [
+            {
+                path: ":slug",
+                element: <BlogDetail />
+            }
+        ]
     }
 ];
