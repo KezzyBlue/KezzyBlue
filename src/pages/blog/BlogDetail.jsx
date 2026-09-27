@@ -53,7 +53,7 @@ function BlogDetail() {
         <div className="blogDetailContainer">
             <Link to=".." className="backButton">
                 <MoveLeft />
-                Blog / {slug}
+                Blog / {blog.title}
             </Link>
             <div className="blogDetailContent">
                 <h1> {blog.title} </h1>
