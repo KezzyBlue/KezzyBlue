@@ -9,6 +9,7 @@ import remarkMath from "remark-math";
 import remarkBreaks from "remark-breaks";
 import rehypeKatex from "rehype-katex";
 import "katex/dist/katex.min.css";
+import BlogPageAnimation from "../../config/animation/BlogPageAnimation";
 
 function BlogDetail() {
 
@@ -51,31 +52,45 @@ function BlogDetail() {
 
     return (
         <div className="blogDetailContainer">
-            <Link to=".." className="backButton">
-                <MoveLeft />
-                Blog / {blog.title}
-            </Link>
+            <BlogPageAnimation delay = {0.1}>
+                <Link to=".." className="backButton">
+                    <MoveLeft />
+                    Blog / {blog.title}
+                </Link>
+            </BlogPageAnimation>
             <div className="blogDetailContent">
-                <h1> {blog.title} </h1>
-                <div className="blogDate">
-                    <CalendarDays size={14} />
-                    {new Date(blog.updated_at).toLocaleDateString("vi-VN")}
-                </div>
-                <div className = "blogSumary">
-                    <p> {blog.sumary} </p>
-                </div>
-                <div className="blogArticleLayout"> 
-                    <div className="blogMarkdown"> 
-                        { blog.content ? ( 
-                            <ReactMarkdown
-                                remarkPlugins={[remarkGfm, remarkMath, remarkBreaks]}
-                                rehypePlugins={[rehypeKatex]}
-                            >
-                            {String(blog.content)} 
-                            </ReactMarkdown> ) : ( 
-                                <p className="blogNoContent"> This blog is empty </p> )} 
-                    </div> 
-                </div>
+                <BlogPageAnimation delay = {0.2}>
+
+                    <h1> {blog.title} </h1>
+                </BlogPageAnimation>
+                <BlogPageAnimation delay = {0.3}>
+
+                    <div className="blogDate">
+                        <CalendarDays size={14} />
+                        {new Date(blog.updated_at).toLocaleDateString("vi-VN")}
+                    </div>
+                </BlogPageAnimation>
+                <BlogPageAnimation delay = {0.5}>
+
+                    <div className = "blogSumary">
+                        <p> {blog.sumary} </p>
+                    </div>
+                </BlogPageAnimation>
+                <BlogPageAnimation delay = {0.6}>
+
+                    <div className="blogArticleLayout"> 
+                        <div className="blogMarkdown"> 
+                            { blog.content ? ( 
+                                <ReactMarkdown
+                                    remarkPlugins={[remarkGfm, remarkMath, remarkBreaks]}
+                                    rehypePlugins={[rehypeKatex]}
+                                >
+                                {String(blog.content)} 
+                                </ReactMarkdown> ) : ( 
+                                    <p className="blogNoContent"> This blog is empty </p> )} 
+                        </div> 
+                    </div>
+                </BlogPageAnimation>
             </div>
         </div>
     );

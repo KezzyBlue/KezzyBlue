@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useMatch, useOutlet } from "react-router-dom";
 import { ArrowRight, BookOpen, CalendarDays, ChevronLeft, ChevronRight, LoaderCircle } from "lucide-react";
 import { getBlogSlug } from "./blogUtils.js";
+import BlogPageAnimation from "../../config/animation/BlogPageAnimation.jsx";
 import "./Blog.css";
 
 function Blog() {
@@ -38,33 +39,38 @@ function Blog() {
 
     return (
         <div className="blogMain">
-            <div className="blogHeader">
-                <div className="blogHeaderTitle">
-                    <BookOpen className="blogHeaderIcon" />
-                    <h1>My blog</h1>
+            <BlogPageAnimation delay={0.1}>
+
+                <div className="blogHeader">
+                    <div className="blogHeaderTitle">
+                        <BookOpen className="blogHeaderIcon" />
+                        <h1>My blog</h1>
+                    </div>
+                    <p>This place is where I will post something about everything!</p>
                 </div>
-                <p>This place is where I will post something about everything!</p>
-            </div>
+            </BlogPageAnimation>
 
             <div className="blogContainer">
                 <div className="blogGrid">
-                    {visibleBlogs.map((blog) => (
-                        <article className="blogCard" key={blog.id ?? `${blog.title}-${blog.updated_at}`}>
-                            <div className="blogCoverImg">
-                                {blog.img_url && <img src={blog.img_url} alt="" loading="lazy" />}
-                            </div>
-                            <div className="blogCardInfo">
-                                <div className="blogDate">
-                                    <CalendarDays size={14} />
-                                    {new Date(blog.updated_at).toLocaleDateString("vi-VN")}
+                    {visibleBlogs.map((blog, index) => (
+                        <BlogPageAnimation delay = {(index + 1) * 0.15}>
+                            <article className="blogCard" key={blog.id ?? `${blog.title}-${blog.updated_at}`}>
+                                <div className="blogCoverImg">
+                                    {blog.img_url && <img src={blog.img_url} alt="" loading="lazy" />}
                                 </div>
-                                <h2>{blog.title}</h2>
-                                <p>{blog.sumary}</p>
-                                <Link className="readMore" to={`/blog/${getBlogSlug(blog)}`}>
-                                    Read more <ArrowRight size={16} />
-                                </Link>
-                            </div>
-                        </article>
+                                <div className="blogCardInfo">
+                                    <div className="blogDate">
+                                        <CalendarDays size={14} />
+                                        {new Date(blog.updated_at).toLocaleDateString("vi-VN")}
+                                    </div>
+                                    <h2>{blog.title}</h2>
+                                    <p>{blog.sumary}</p>
+                                    <Link className="readMore" to={`/blog/${getBlogSlug(blog)}`}>
+                                        Read more <ArrowRight size={16} />
+                                    </Link>
+                                </div>
+                            </article>
+                        </BlogPageAnimation>
                     ))}
                 </div>
 
