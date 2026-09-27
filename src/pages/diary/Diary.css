@@ -1,0 +1,99 @@
+.diaryContainer {
+    display: flex;
+    flex-direction: column;
+    width: min(900px, calc(100% - 40px));
+    margin: 0 auto;
+    padding: 32px 0;
+    color: var(--text0);
+}
+
+.diaryHeaderTitle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 0;
+}
+
+.diaryHeaderIcon {
+    width: 38px;
+    height: 38px;
+    color: var(--primary);
+}
+
+.diaryHeader h1 {
+    margin: 0;
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.diaryHeader>p {
+    max-width: 560px;
+    line-height: 1.6;
+}
+
+.diaryContent {
+    display: flex;
+    flex-direction: column;
+    margin-top: 24px;
+    border-top: var(--border);
+}
+
+.diaryBar {
+    display: block;
+    padding: 18px 4px;
+    border-bottom: var(--border);
+    color: inherit;
+    text-decoration: none;
+    transition: padding .18s ease, color .18s ease;
+}
+
+.diaryBar:hover {
+    padding-right: 10px;
+    padding-left: 10px;
+    color: var(--active);
+}
+
+.diaryBar time {
+    color: var(--text2);
+    font-size: .85rem;
+}
+
+.diaryBar p {
+    display: -webkit-box;
+    margin: 8px 0 0;
+    overflow: hidden;
+    color: var(--text1);
+    line-height: 1.6;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.diaryMessage {
+    color: var(--text2);
+    line-height: 1.6;
+}
+
+.loading {
+    display: block;
+    margin: 60px auto;
+    animation: spin 1s linear infinite;
+}
+
+@media (max-width: 600px) {
+    .diaryContainer {
+        width: min(100% - 28px, 520px);
+        padding-top: 24px;
+    }
+
+    .diaryContent {
+        margin-top: 16px;
+    }
+}
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

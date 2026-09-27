@@ -1,0 +1,176 @@
+.diaryDetailContainer {
+	width: min(900px, calc(100% - 40px));
+	margin: 0 auto;
+	padding: 28px 0 48px;
+	color: var(--text0);
+}
+
+.diaryBackButton {
+	display: inline-flex;
+	align-items: center;
+	gap: 9px;
+	color: var(--text2);
+	text-decoration: none;
+	transition: color .18s ease, gap .18s ease;
+}
+
+.diaryBackButton:hover {
+	gap: 13px;
+	color: var(--active);
+}
+
+.diaryDetailContent {
+	margin-top: 34px;
+}
+
+.diaryDetailContent h1 {
+	margin: 0 0 12px;
+	font-size: clamp(1.8rem, 4vw, 2.5rem);
+	line-height: 1.2;
+}
+
+.diaryDate {
+	display: flex;
+	align-items: center;
+	gap: 7px;
+	color: var(--text2);
+	font-size: .88rem;
+}
+
+.diaryMarkdown {
+	margin-top: 28px;
+	color: var(--text1);
+	line-height: 1.75;
+	overflow-wrap: anywhere;
+}
+
+.diaryMarkdown > :first-child {
+	margin-top: 0;
+}
+
+.diaryMarkdown > :last-child {
+	margin-bottom: 0;
+}
+
+.diaryMarkdown p {
+	margin: 0 0 1.15em;
+}
+
+.diaryMarkdown h1,
+.diaryMarkdown h2,
+.diaryMarkdown h3,
+.diaryMarkdown h4,
+.diaryMarkdown h5,
+.diaryMarkdown h6 {
+	margin: 1.55em 0 .6em;
+	color: var(--text0);
+	line-height: 1.3;
+}
+
+.diaryMarkdown h1 { font-size: 2rem; }
+.diaryMarkdown h2 { font-size: 1.6rem; }
+.diaryMarkdown h3 { font-size: 1.3rem; }
+
+.diaryMarkdown ul,
+.diaryMarkdown ol {
+	margin: 0 0 1.15em;
+	padding-left: 1.75em;
+}
+
+.diaryMarkdown li + li {
+	margin-top: .35em;
+}
+
+.diaryMarkdown blockquote {
+	margin: 1.25em 0;
+	padding: .75em 1em;
+	border-left: 3px solid var(--active);
+	background: var(--bg1);
+	color: var(--text2);
+}
+
+.diaryMarkdown pre {
+	max-width: 100%;
+	margin: 1.25em 0;
+	padding: 1em 1.15em;
+	overflow-x: auto;
+	border: var(--border);
+	border-radius: 8px;
+	background: var(--bg1);
+	color: var(--text0);
+	line-height: 1.55;
+}
+
+.diaryMarkdown code {
+	padding: .12em .35em;
+	border-radius: 4px;
+	background: var(--bg2);
+	font-family: Consolas, "Liberation Mono", monospace;
+	font-size: .9em;
+}
+
+.diaryMarkdown pre code {
+	padding: 0;
+	background: transparent;
+	font-size: .92em;
+}
+
+.diaryMarkdown table {
+	display: block;
+	width: max-content;
+	min-width: 100%;
+	max-width: 100%;
+	margin: 1.25em 0;
+	overflow-x: auto;
+	border-collapse: collapse;
+}
+
+.diaryMarkdown th,
+.diaryMarkdown td {
+	padding: .6em .8em;
+	border: var(--border);
+	text-align: left;
+}
+
+.diaryMarkdown th {
+	background: var(--bg2);
+	color: var(--text0);
+}
+
+.diaryMarkdown a {
+	color: var(--active);
+}
+
+.diaryMarkdown img {
+	max-width: 100%;
+	height: auto;
+}
+
+.diaryMarkdown hr {
+	margin: 1.75em 0;
+	border: 0;
+	border-top: var(--border);
+}
+
+.diaryMarkdown .katex-display {
+	max-width: 100%;
+	margin: 1.25em 0;
+	overflow-x: auto;
+	overflow-y: hidden;
+}
+
+.diaryMessage {
+	color: var(--text2);
+	line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+	.diaryDetailContainer {
+		width: min(100% - 28px, 520px);
+		padding-top: 22px;
+	}
+
+	.diaryDetailContent {
+		margin-top: 26px;
+	}
+}

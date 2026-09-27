@@ -15,6 +15,8 @@ import HobbiesMain from "../pages/about/Hobbies/hobbiesMain/HobbiesMain.jsx";
 import Visualizer from "../pages/visualizer/Visualizer.jsx";
 import Blog from "../pages/blog/Blog.jsx";
 import BlogDetail from "../pages/blog/BlogDetail.jsx";
+import Diary from "../pages/diary/Diary.jsx";
+import DiaryDetail from "../pages/diary/DiaryDetail.jsx";
 export const routes = [
     {
         path: "/",
@@ -111,5 +113,17 @@ export const routes = [
                 element: <BlogDetail />
             }
         ]
+    },
+    {
+        path: "/diary",
+        title: "Diary ✍️",
+        element: <Diary/>,
+        showInNavbar: true,
+        children: [
+            {
+                path: ":slug",
+                element: <DiaryDetail />
+            }
+        ]    
     }
 ];
