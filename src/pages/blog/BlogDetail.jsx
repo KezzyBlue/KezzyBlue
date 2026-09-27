@@ -5,6 +5,10 @@ import { getBlogSlug } from "./blogUtils";
 import './BlogDetail.css';
 import ReactMarkdown from "react-markdown"; 
 import remarkGfm from "remark-gfm";
+import remarkMath from "remark-math";
+import remarkBreaks from "remark-breaks";
+import rehypeKatex from "rehype-katex";
+import "katex/dist/katex.min.css";
 
 function BlogDetail() {
 
@@ -63,7 +67,10 @@ function BlogDetail() {
                 <div className="blogArticleLayout"> 
                     <div className="blogMarkdown"> 
                         { blog.content ? ( 
-                            <ReactMarkdown remarkPlugins={[ remarkGfm ]} > 
+                            <ReactMarkdown
+                                remarkPlugins={[remarkGfm, remarkMath, remarkBreaks]}
+                                rehypePlugins={[rehypeKatex]}
+                            >
                             {String(blog.content)} 
                             </ReactMarkdown> ) : ( 
                                 <p className="blogNoContent"> This blog is empty </p> )} 
