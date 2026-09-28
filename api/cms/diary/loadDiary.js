@@ -2,7 +2,8 @@ import supabase from "./database/supabase.js";
 export default async function handler(req, res) {
     const {data, error} = await supabase
         .from('diaries')
-        .select('*');
+        .select('*')
+        .order("created_at", { ascending: false });
 
     if (error) {
         console.error("Load diary error:", error);
