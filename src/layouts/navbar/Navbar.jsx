@@ -3,8 +3,7 @@ import { NavLink, useLocation } from 'react-router-dom';
 import { routes } from '../../config/routes.jsx';
 import '../../styles/theme.css';
 import { useState, useEffect } from 'react';
-import MoonIcon from "/icon/moon.svg?react";
-import SunIcon from "/icon/sun.svg?react";
+import { Sun, Moon } from 'lucide-react';
 
 function Navbar({ theme, setTheme }) {
     const toggleTheme = () => {
@@ -59,7 +58,7 @@ function Navbar({ theme, setTheme }) {
                         ))}
                 </div>
                 <button className="themeToggle themeIcon" onClick={toggleTheme}>
-                    {theme === "light" ? "⏾" : "🔅"}
+                    {theme === "light" ? (<Moon />) : (<Sun style = {{color: "orange"}}/>)}
                 </button>
             </div>
 
