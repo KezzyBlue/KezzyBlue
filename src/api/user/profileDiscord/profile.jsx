@@ -22,6 +22,7 @@ function Profile() {
             const response = await axios.get(`https://api.lanyard.rest/v1/users/${userId}`);
             const profileData = response.data.data;
             const discordUser = profileData.discord_user;
+            console.log(response.data.data);
             setUserData(profileData);
             setAvatarFrame(
                 discordUser.avatar_decoration_data?.asset
@@ -167,7 +168,7 @@ function Profile() {
                                 <img src={avatarFrame} className="avatarFrameProfile" />
                                 <div className="thinkingBubble">
                                     {
-                                        userData.activities[0]? "勝った!! 勝ったのは俺のほだ" : "I'm sleeping 💤💤💤💤💤💤"
+                                        userData.discord_status == "online"? "勝った!! 勝ったのは俺のほだ" : "I'm sleeping 💤💤💤💤💤💤"
                                     }
                                 </div>
                                 <div className={`status ${userData?.discord_status}`} style={{ zIndex: "2", bottom: "6px", right: "0px" }}>
