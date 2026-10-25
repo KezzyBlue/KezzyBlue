@@ -22,7 +22,6 @@ function Profile() {
             const response = await axios.get(`https://api.lanyard.rest/v1/users/${userId}`);
             const profileData = response.data.data;
             const discordUser = profileData.discord_user;
-            console.log(response.data.data);
             setUserData(profileData);
             setAvatarFrame(
                 discordUser.avatar_decoration_data?.asset
