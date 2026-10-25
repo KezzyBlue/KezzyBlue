@@ -199,8 +199,8 @@ function Profile() {
                                 </div>
                                 <p style={{ color: "black", marginTop : "20px" }}> {getStatus(status)} </p>
                                 {
-                                    userData.activities.length > 1 ?
-                                        (userData.activities.slice(1).map((activity, index) => activitiesList(activity, index)))
+                                    userData.activities.length > 0 ?
+                                        (userData.activities.map((activity, index) => activitiesList(activity, index)))
                                         :
                                         (
                                             <div className="activity" style={{ display: "flex", alignItems: "center" }}>
