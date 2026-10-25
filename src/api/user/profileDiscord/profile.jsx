@@ -167,7 +167,7 @@ function Profile() {
                                 <img src={avatarFrame} className="avatarFrameProfile" />
                                 <div className="thinkingBubble">
                                     {
-                                        userData.activities[0]? userData.activities[0].state : "I'm sleeping 💤💤💤💤💤💤"
+                                        userData.activities[0]? "勝った!! 勝ったのは俺のほだ" : "I'm sleeping 💤💤💤💤💤💤"
                                     }
                                 </div>
                                 <div className={`status ${userData?.discord_status}`} style={{ zIndex: "2", bottom: "6px", right: "0px" }}>
