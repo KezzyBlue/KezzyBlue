@@ -22,6 +22,7 @@ const favouriteTracks = [
 ];
 
 const favouriteArtists = [
+    '0u5ikKYYDO2XGyYjNGQRGf',
     '0V2DfUrZvBuUReS1LFo5ZI',
     '1oD9fKbb7qQ2nhn9JJC24F',
     '3Myoe574gxIKLU5bKqjkFk',
@@ -33,12 +34,14 @@ const favouriteAlbums = [
     '1ZnJrvDY8ih3ppPWR2Tc2a',
     '5ER34Rd6OkCwXBD7SOMB97',
     '4WSRrfRR3G8eAyZuBpWQ7H',
-    '5jDZKqgoVRbob6A3omYTG5'
+    '5jDZKqgoVRbob6A3omYTG5',
+    '5eEoxKZllpbkii4v1DQmcS'
 ];
 
 const myPlaylists = [
     '6VOEgYvAbCvh6uyYPrqe6Y',
-    '26O6CD0Ufg3t0QW5LMG0Rq'
+    '26O6CD0Ufg3t0QW5LMG0Rq',
+    '5hPR3M68qIhxkaz3G7zblI'
 ];
 
 const imageOf = (item) => item?.images?.[0]?.url;
@@ -171,7 +174,7 @@ function Music() {
                         <MusicSection icon={<Headphones size={19} />} title="My playlists" count={catalog.playlists.length}>
                             <div className="music-playlistGrid">
                                 {catalog.playlists.map((playlist) => <SpotifyLink key={playlist.id} href={playlist.external_urls?.spotify}>
-                                    <article className="music-playlist"><Artwork src={imageOf(playlist)} alt={`${playlist.name} cover`} /><span><strong>{playlist.name}</strong><small>{playlist.tracks?.total || 0} tracks</small></span></article>
+                                    <article className="music-playlist"><Artwork src={imageOf(playlist)} alt={`${playlist.name} cover`} /><span><strong>{playlist.name}</strong><small>{playlist.tracks?.total || 'Click to play'} tracks</small></span></article>
                                 </SpotifyLink>)}
                             </div>
                         </MusicSection>
