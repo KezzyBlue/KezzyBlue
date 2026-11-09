@@ -41,7 +41,7 @@ const favouriteAlbums = [
 const myPlaylists = [
     '6VOEgYvAbCvh6uyYPrqe6Y',
     '26O6CD0Ufg3t0QW5LMG0Rq',
-    '5hPR3M68qIhxkaz3G7zblI'
+    '6FlvC4KqS6E1gEjTk4n40t'
 ];
 
 const imageOf = (item) => item?.images?.[0]?.url;
