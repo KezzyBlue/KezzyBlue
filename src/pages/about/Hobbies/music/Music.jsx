@@ -11,41 +11,17 @@ import {
 import { getTrack, getAlbum, getArtist, getPlaylist } from "../../../../api/spotify/spotify.js";
 import './Music.css';
 import { useEffect, useState } from "react";
-
-const favouriteTracks = [
-    '1yo967mk7CpjvruNxBecOY',
-    '4jee49YwJGT8HAPxBF6jcx',
-    '6yLbighkE0kn1OH9zd4aBi',
-    '7zoC3uP4Ngs3bLFrEobSTl',
-    '0ON38MgDpAMcRC9ULx7NOf',
-    '36JZa2LFSw6dEVUZO7a8wl'
-];
-
-const favouriteArtists = [
-    '0u5ikKYYDO2XGyYjNGQRGf',
-    '0V2DfUrZvBuUReS1LFo5ZI',
-    '1oD9fKbb7qQ2nhn9JJC24F',
-    '3Myoe574gxIKLU5bKqjkFk',
-    '5dfZ5uSmzR7VQK0udbAVpf',
-    '5xY6E5PMZNtz9jDvxTRiGI'
-];
-
-const favouriteAlbums = [
-    '1ZnJrvDY8ih3ppPWR2Tc2a',
-    '5ER34Rd6OkCwXBD7SOMB97',
-    '4WSRrfRR3G8eAyZuBpWQ7H',
-    '5jDZKqgoVRbob6A3omYTG5',
-    '5eEoxKZllpbkii4v1DQmcS'
-];
-
-const myPlaylists = [
-    '6VOEgYvAbCvh6uyYPrqe6Y',
-    '26O6CD0Ufg3t0QW5LMG0Rq',
-    '6FlvC4KqS6E1gEjTk4n40t'
-];
+import { loadMusic } from "../../../../api/spotify/loadMusic.js";
 
 const imageOf = (item) => item?.images?.[0]?.url;
 const artistNames = (artists = []) => artists.map((artist) => artist.name).join(', ');
+const spotifyIdFrom = (entry, type) => {
+    const value = typeof entry === 'string'
+        ? entry
+        : entry?.[`spotify_${type}_id`] ?? entry?.[`${type}_id`] ?? entry?.[`${type}Id`] ?? entry?.spotify_id ?? entry?.spotifyId ?? entry?.id;
+
+    return typeof value === 'string' ? value.match(/[A-Za-z0-9]{22}/)?.[0] : undefined;
+};
 
 function SpotifyLink({ href, children }) {
     if (!href) return children;
@@ -69,18 +45,19 @@ function Music() {
     useEffect(() => {
         let active = true;
 
-        async function loadMusic() {
+        async function loadCatalog() {
+            const music = await loadMusic();
             const [tracks, artists, albums, playlists] = await Promise.all([
-                Promise.all(favouriteTracks.map(getTrack)),
-                Promise.all(favouriteArtists.map(getArtist)),
-                Promise.all(favouriteAlbums.map(getAlbum)),
-                Promise.all(myPlaylists.map(getPlaylist)),
+                Promise.all((music.favourite_tracks ?? []).map((entry) => spotifyIdFrom(entry, 'track')).filter(Boolean).map(getTrack)),
+                Promise.all((music.favourite_artists ?? []).map((entry) => spotifyIdFrom(entry, 'artist')).filter(Boolean).map(getArtist)),
+                Promise.all((music.favourite_albums ?? []).map((entry) => spotifyIdFrom(entry, 'album')).filter(Boolean).map(getAlbum)),
+                Promise.all((music.my_playlists ?? []).map((entry) => spotifyIdFrom(entry, 'playlist')).filter(Boolean).map(getPlaylist)),
             ]);
 
             if (active) setCatalog({ tracks, artists, albums, playlists });
         }
 
-        loadMusic()
+        loadCatalog()
             .catch(() => {
                 if (active) setError('Spotify is taking a little longer than usual. Please refresh and try again.');
             })

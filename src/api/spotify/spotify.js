@@ -21,7 +21,6 @@ export async function getArtist(artistId) {
 export async function getPlaylist(playlistId) {
     const response = await fetch(`/api/spotify/playlist?playlistId=${encodeURIComponent(playlistId)}`);
     const data = await response.json();
-    console.log(data);
 
     return data;
 }
